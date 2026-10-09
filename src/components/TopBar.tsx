@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X, MapPin } from 'lucide-react';
+import Logo from './Logo';
 
 interface TopBarProps {
   onScrollToSection: (sectionId: string) => void;
@@ -20,18 +21,14 @@ export const TopBar: React.FC<TopBarProps> = ({ onScrollToSection }) => {
 
   return (
     <header className="sticky top-0 z-50 h-14 md:h-16 bg-[#14294B] text-white px-4 sm:px-6 flex items-center justify-between border-b-2 border-[#1E3A67] select-none">
-      {/* Left: Negative SVG Logo as <img> with height 36px mobile / 44px desktop */}
+      {/* Left: Logo */}
       <button
         type="button"
         onClick={handleLogoClick}
         className="flex items-center cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5B700] rounded-[4px]"
         aria-label="Odskoč si – návrat na úvod"
       >
-        <img
-          src="/odskoc-si-logo-negativ.svg"
-          alt="Odskoč si"
-          className="h-[36px] md:h-[44px] w-auto object-contain block logo-bounce-once"
-        />
+        <Logo variant="dark" height={40} className="logo-bounce-once" />
       </button>
 
       {/* Right on Desktop:

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { InterestMap } from './InterestMap';
 import { StickerSection } from './StickerSection';
 import { PrivacyModal } from './PrivacyModal';
+import Logo from './Logo';
 import { submitToGoogleSheet } from '../config/webhook';
 import {
   ChevronDown,
@@ -137,8 +138,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
       <section className="bg-[#14294B] text-white pt-12 sm:pt-16 pb-16 sm:pb-20 px-5 sm:px-8 border-b-2 border-[#1E3A67] relative">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-            {/* Left: Headline & Subtitle */}
-            <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+            {/* Left: Headline, Subtitle & Launch Badge */}
+            <div className="lg:col-span-12 max-w-4xl space-y-5 sm:space-y-6">
               {/* Hlavní nadpis dle zadání:
                   Slovo „WC“ v hranatém žlutém štítku (#F5B700, text #14294B, zaoblení 8 px, vnitřní okraj 0 8px)
                   a zbytek bílý. „Bez nákupu.“ na druhém řádku žlutě. */}
@@ -151,34 +152,26 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               </h1>
 
               {/* Podnadpis dle zadání */}
-              <p className="font-['Atkinson_Hyperlegible_Next','Atkinson_Hyperlegible',sans-serif] text-[18px] sm:text-[21px] text-white/90 leading-[1.4] max-w-[50ch] font-medium">
+              <p className="font-['Atkinson_Hyperlegible_Next','Atkinson_Hyperlegible',sans-serif] text-[18px] sm:text-[21px] text-white/90 leading-[1.4] max-w-[55ch] font-medium">
                 Kavárny a restaurace, kde si odskočíte zdarma a bez ptaní. Síť právě vzniká, pomozte nám vybrat místa.
               </p>
 
-              <div className="text-xs font-['Overpass',sans-serif] font-[800] uppercase tracking-wider text-slate-300 pt-1">
-                Připravujeme první města a regiony · Spouštíme na jaře 2027
-              </div>
-            </div>
-
-            {/* Right: Uploaded sticker image rotated by -3deg with rounded corners and gentle shadow */}
-            <div className="lg:col-span-5 flex justify-center lg:justify-end">
-              <div className="relative transform -rotate-3 hover:rotate-0 transition-transform duration-300">
-                <img
-                  src="/odskoc-si-nalepka.png"
-                  alt="Oficiální nálepka Odskoč si na dveřích provozovny"
-                  className="w-full max-w-[320px] sm:max-w-[380px] rounded-[16px] shadow-2xl block"
-                />
+              {/* Jednoduchý žlutý štítek „Spouštíme na jaře 2027“ */}
+              <div className="pt-1">
+                <span className="inline-flex items-center bg-[#F5B700] text-[#14294B] font-['Overpass',sans-serif] font-[900] text-sm sm:text-base px-3.5 py-1.5 rounded-[8px] uppercase tracking-wider">
+                  Spouštíme na jaře 2027
+                </span>
               </div>
             </div>
           </div>
 
           {/* Rozcestník – tři cesty (karty vedle sebe na desktopu, na mobilu pod sebou) */}
           <div className="mt-12 sm:mt-16 pt-8 border-t border-[#1E3A67]">
-            <div className="text-xs font-['Overpass',sans-serif] font-[900] text-[#F5B700] uppercase tracking-wider mb-4">
-              Vyberte svou roli:
+            <div className="text-xl sm:text-2xl font-['Overpass',sans-serif] font-[900] text-[#F5B700] uppercase tracking-wider mb-4">
+              Kdo jste?
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
-              {/* Karta 1: Pro města a regiony */}
+              {/* Karta 1: Město nebo region */}
               <button
                 type="button"
                 onClick={() => onScrollToSection('pro-mesta')}
@@ -186,18 +179,18 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               >
                 <div>
                   <div className="font-['Overpass',sans-serif] font-[900] text-[20px] sm:text-[22px] text-white tracking-[-0.5px] leading-tight mb-2 flex items-center justify-between">
-                    <span>Pro města a regiony</span>
+                    <span>Město nebo region</span>
                     <span className="text-[#F5B700] text-[22px] font-[900] transition-transform duration-150 group-hover:translate-x-1.5 shrink-0 ml-2" aria-hidden="true">
                       →
                     </span>
                   </div>
                   <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[15px] sm:text-[16px] text-slate-200 leading-[1.4]">
-                    Síť veřejných WC v centru bez stavby a bez investice. Jedna smlouva, jedna faktura. Funguje i pro mikroregiony a turistické oblasti.
+                    Veřejná WC v centru bez stavby a investic. Podniky zajistíme my, vy platíte jednu fakturu.
                   </p>
                 </div>
               </button>
 
-              {/* Karta 2: Pro kavárny a restaurace */}
+              {/* Karta 2: Kavárna nebo restaurace */}
               <button
                 type="button"
                 onClick={() => onScrollToSection('pro-podniky')}
@@ -205,32 +198,32 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               >
                 <div>
                   <div className="font-['Overpass',sans-serif] font-[900] text-[20px] sm:text-[22px] text-white tracking-[-0.5px] leading-tight mb-2 flex items-center justify-between">
-                    <span>Pro kavárny a restaurace</span>
+                    <span>Kavárna nebo restaurace</span>
                     <span className="text-[#F5B700] text-[22px] font-[900] transition-transform duration-150 group-hover:translate-x-1.5 shrink-0 ml-2" aria-hidden="true">
                       →
                     </span>
                   </div>
                   <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[15px] sm:text-[16px] text-slate-200 leading-[1.4]">
-                    2 000 Kč měsíčně za to, že pustíte na toaletu i lidi bez nákupu. Vyplácíme jako nájem, každý měsíc.
+                    Pusťte lidi na toaletu a dostávejte 2 000 Kč každý měsíc. Nálepku i zápis do map zařídíme my.
                   </p>
                 </div>
               </button>
 
-              {/* Karta 3: Chci to u nás (veřejnost) */}
+              {/* Karta 3 (zvýrazněná žlutým rámečkem): Chybí vám WC ve městě? */}
               <button
                 type="button"
                 onClick={() => onScrollToSection('mapa-zajmu')}
-                className="group bg-[#1E3560] hover:bg-[#254277] border-2 border-[#2B4B85] hover:border-[#F5B700] p-5 sm:p-6 rounded-[10px] text-left transition-all duration-150 cursor-pointer flex flex-col justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5B700]"
+                className="group bg-[#1E3560] hover:bg-[#254277] border-2 border-[#F5B700] hover:border-[#F5B700] p-5 sm:p-6 rounded-[10px] text-left transition-all duration-150 cursor-pointer flex flex-col justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5B700] ring-1 ring-[#F5B700]/30 shadow-md shadow-[#F5B700]/10"
               >
                 <div>
                   <div className="font-['Overpass',sans-serif] font-[900] text-[20px] sm:text-[22px] text-[#F5B700] tracking-[-0.5px] leading-tight mb-2 flex items-center justify-between">
-                    <span>Chci to u nás</span>
+                    <span>Chybí vám WC ve městě?</span>
                     <span className="text-[#F5B700] text-[22px] font-[900] transition-transform duration-150 group-hover:translate-x-1.5 shrink-0 ml-2" aria-hidden="true">
                       →
                     </span>
                   </div>
-                  <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[15px] sm:text-[16px] text-slate-200 leading-[1.4]">
-                    Napište nám, kde vám chybí WC. Přesvědčíme vaše město.
+                  <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[15px] sm:text-[16px] text-slate-100 leading-[1.4]">
+                    Dejte nám tip, kde toaleta chybí. Ukážeme to vaší radnici.
                   </p>
                 </div>
               </button>
@@ -506,66 +499,68 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
         className="scroll-mt-14 bg-slate-50 py-16 sm:py-24 px-5 sm:px-8 border-b-2 border-[#14294B]"
       >
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
-          {/* Left: Info and Benefits */}
+          {/* Left: Info, Numbers and Benefits */}
           <div className="lg:col-span-6 space-y-6">
             <div className="text-xs font-['Overpass',sans-serif] font-[900] text-[#14294B] uppercase tracking-wider">
               Předregistrace provozoven
             </div>
 
-            <h2 className="font-['Overpass',sans-serif] font-[900] text-[34px] sm:text-[44px] text-[#14294B] leading-[1.05] tracking-[-0.5px]">
-              2 000 Kč měsíčně za to, že pustíte na toaletu i lidi bez nákupu.
-            </h2>
-
-            <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[18px] text-slate-800 leading-[1.5]">
-              Vyplácíme jako stálý nájem každý měsíc na účet. Žádné složité počítání návštěv. Pomáháte kultivovat město a získáváte nové platící zákazníky.
-            </p>
-
-            {/* Klíčové výhody */}
-            <div className="space-y-3 pt-2">
-              <div className="p-4 bg-white border border-slate-300 rounded-[6px]">
-                <div className="font-['Overpass',sans-serif] font-[900] text-[17px] text-[#14294B] leading-snug">
-                  2 000 Kč měsíčně vypláceno jako nájem
-                </div>
-                <div className="text-[15px] text-slate-700 mt-1">
-                  Pravidelný paušální příspěvek na toaletní papír, mýdlo, vodu a úklid. Platba odchází spolehlivě každý kalendářní měsíc.
-                </div>
+            {/* Velké číslo a tarif Komfort */}
+            <div className="space-y-2">
+              <div className="font-['Overpass',sans-serif] font-[900] text-[42px] sm:text-[56px] text-[#14294B] leading-none tracking-tight">
+                2 000 Kč <span className="text-[24px] sm:text-[28px] font-bold text-slate-700">měsíčně</span>
               </div>
-
-              <div className="p-4 bg-white border border-slate-300 rounded-[6px]">
-                <div className="font-['Overpass',sans-serif] font-[900] text-[17px] text-[#14294B] leading-snug">
-                  Právo odmítnout problematické osoby
-                </div>
-                <div className="text-[15px] text-slate-700 mt-1">
-                  Vstup je určen pro každého slušného návštěvníka. Personál má plné právo odmítnout zjevně agresivní, podnapilé či znečištěné osoby k ochraně bezpečí zaměstnanců a hostů.
-                </div>
+              <div className="inline-block bg-[#F5B700]/30 border border-[#F5B700] text-[#14294B] px-3 py-1.5 rounded-[6px] text-sm font-semibold">
+                Komfort s bezbariérovým WC nebo přebalovacím pultem: <strong>2 600 Kč měsíčně</strong>
               </div>
+              <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[17px] text-slate-800 leading-[1.5] pt-1">
+                Za to, že pustíte na toaletu i lidi bez nákupu. Vyplácíme jako nájem, každý měsíc.
+              </p>
+            </div>
 
-              <div className="p-4 bg-white border border-slate-300 rounded-[6px]">
-                <div className="font-['Overpass',sans-serif] font-[900] text-[17px] text-[#14294B] leading-snug">
-                  Zápis v mapách a noví zákazníci
-                </div>
-                <div className="text-[15px] text-slate-700 mt-1">
-                  Váš podnik zapíšeme do Google Map, Mapy.cz a OpenStreetMap. Návštěvníci, kteří přijdou na WC, si velice často rovnou koupí kávu, limonádu nebo dezert.
-                </div>
-              </div>
+            {/* Čtyři hlavní body dle zadání */}
+            <ul className="space-y-2.5 text-[16px] text-slate-800 list-none p-0 font-medium">
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#F5B700] text-lg font-black leading-none mt-0.5">•</span>
+                <span>Peníze chodí každý měsíc do 20. dne, jako nájem.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#F5B700] text-lg font-black leading-none mt-0.5">•</span>
+                <span>Nálepku, směrovku a zápis do map zařídíme my.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#F5B700] text-lg font-black leading-none mt-0.5">•</span>
+                <span>Drobné škody na WC nahradíme.</span>
+              </li>
+              <li className="flex items-start gap-2.5">
+                <span className="text-[#F5B700] text-lg font-black leading-none mt-0.5">•</span>
+                <span>Můžete kdykoli skončit.</span>
+              </li>
+            </ul>
 
-              <div className="p-4 bg-white border border-slate-300 rounded-[6px]">
-                <div className="font-['Overpass',sans-serif] font-[900] text-[17px] text-[#14294B] leading-snug">
-                  Náhrada drobných škod
-                </div>
-                <div className="text-[15px] text-slate-700 mt-1">
-                  Správce sítě provozuje garanční fond pro krytí a rychlou náhradu případných drobných poškození toaletního vybavení.
-                </div>
+            {/* Ukázka nálepky v sekci pro podniky: /odskoc-si-nalepka.webp (fallback .png), max. šířka 360 px */}
+            <div className="pt-2">
+              <div className="text-xs font-['Overpass',sans-serif] font-[900] text-slate-600 uppercase tracking-wider mb-2">
+                Ukázka označení provozovny:
               </div>
+              <picture className="block">
+                <source srcSet="/odskoc-si-nalepka.webp" type="image/webp" />
+                <img
+                  src="/odskoc-si-nalepka.png"
+                  alt="Ukázka nálepky Odskoč si na dveřích provozovny"
+                  className="w-full max-w-[360px] rounded-[12px] shadow-lg border border-slate-200 block"
+                />
+              </picture>
+            </div>
 
-              <div className="p-4 bg-white border border-slate-300 rounded-[6px]">
-                <div className="font-['Overpass',sans-serif] font-[900] text-[17px] text-[#14294B] leading-snug">
-                  Výpověď kdykoli bez sankcí
-                </div>
-                <div className="text-[15px] text-slate-700 mt-1">
-                  Spolupráce je zcela dobrovolná. Pokud vám síť z jakéhokoliv důvodu nebude vyhovovat, můžete smlouvu kdykoliv vypovědět bez pokut.
-                </div>
+            {/* Samostatný zvýrazněný box „Vaše pravidla platí“ */}
+            <div className="p-5 bg-[#14294B] text-white rounded-[8px] border-l-4 border-[#F5B700] space-y-2 shadow-sm">
+              <div className="font-['Overpass',sans-serif] font-[900] text-[18px] text-[#F5B700]">
+                Vaše pravidla platí
               </div>
+              <p className="text-[15px] text-slate-100 leading-relaxed font-normal">
+                Podnik může odmítnout osoby pod vlivem alkoholu či drog a osoby, které narušují provoz. Klíč od WC můžete mít na baru a půjčovat ho na požádání.
+              </p>
             </div>
           </div>
 
@@ -809,13 +804,9 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
       <footer className="bg-[#14294B] text-white py-14 px-5 sm:px-8 border-t-2 border-[#1E3A67] select-none text-left">
         <div className="max-w-6xl mx-auto space-y-10">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
-            {/* Left: Negative SVG Logo as <img> with height 44px */}
+            {/* Left: Logo */}
             <div className="md:col-span-6 space-y-4">
-              <img
-                src="/odskoc-si-logo-negativ.svg"
-                alt="Odskoč si – logo"
-                className="h-[44px] w-auto object-contain block"
-              />
+              <Logo variant="dark" height={40} />
               <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[16px] text-slate-200 max-w-sm leading-[1.5]">
                 WC zdarma. Bez nákupu v kavárnách a restauracích. Připravujeme první města a regiony, spouštíme na jaře 2027.
               </p>

@@ -41,8 +41,10 @@
  * 8. Zkopírujte vygenerovanou URL webové aplikace a vložte ji do proměnné níže:
  */
 
+import { API_URL } from '../config';
+
 // >>> SEM VLOŽTE URL VAŠEHO GOOGLE APPS SCRIPT WEBHOOKU <<<
-export const GOOGLE_APPS_SCRIPT_WEBHOOK_URL: string = '';
+export const GOOGLE_APPS_SCRIPT_WEBHOOK_URL: string = API_URL;
 
 export interface WebhookPayload {
   formType: 'interest_vote' | 'business_preregistration' | 'city_inquiry';

@@ -7,11 +7,14 @@ export const StickerSection: React.FC = () => {
         {/* Left: Uploaded sticker image */}
         <div className="md:col-span-5 flex justify-center md:justify-start">
           <div className="relative transform -rotate-2 hover:rotate-0 transition-transform duration-300">
-            <img
-              src="/odskoc-si-nalepka.png"
-              alt="Nálepka Odskoč si na dveřích podniku"
-              className="w-full max-w-[280px] sm:max-w-[320px] rounded-[16px] shadow-xl block"
-            />
+            <picture>
+              <source srcSet="/odskoc-si-nalepka.webp" type="image/webp" />
+              <img
+                src="/odskoc-si-nalepka.png"
+                alt="Nálepka Odskoč si na dveřích podniku"
+                className="w-full max-w-[360px] rounded-[16px] shadow-xl block"
+              />
+            </picture>
           </div>
         </div>
 
