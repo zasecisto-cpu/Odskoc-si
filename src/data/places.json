@@ -1,0 +1,262 @@
+[
+  {
+    "id": "u-veze",
+    "name": "Kavárna U Věže – ukázka",
+    "address": "Horní náměstí 14, 746 01 Opava",
+    "lat": 49.9385,
+    "lng": 17.9029,
+    "barrierFree": true,
+    "changingTable": true,
+    "openingHours": {
+      "mon": { "open": "07:30", "close": "20:00" },
+      "tue": { "open": "07:30", "close": "20:00" },
+      "wed": { "open": "07:30", "close": "20:00" },
+      "thu": { "open": "07:30", "close": "20:00" },
+      "fri": { "open": "07:30", "close": "21:00" },
+      "sat": { "open": "08:30", "close": "21:00" },
+      "sun": { "open": "09:00", "close": "19:00" },
+      "summary": "Po–Čt 7:30–20:00, Pá 7:30–21:00, So 8:30–21:00, Ne 9:00–19:00"
+    },
+    "ratings": {
+      "admittedYes": 142,
+      "admittedNo": 3,
+      "cleanlinessSum": 684,
+      "cleanlinessCount": 145
+    },
+    "note": "Prostorné toalety v přízemí, bezbariérový nájezd bez schodů."
+  },
+  {
+    "id": "na-rynku",
+    "name": "Bistro Na Rynku – ukázka",
+    "address": "Dolní náměstí 6, 746 01 Opava",
+    "lat": 49.9372,
+    "lng": 17.9051,
+    "barrierFree": false,
+    "changingTable": false,
+    "openingHours": {
+      "mon": { "open": "08:00", "close": "21:00" },
+      "tue": { "open": "08:00", "close": "21:00" },
+      "wed": { "open": "08:00", "close": "21:00" },
+      "thu": { "open": "08:00", "close": "21:00" },
+      "fri": { "open": "08:00", "close": "22:30" },
+      "sat": { "open": "09:00", "close": "22:30" },
+      "sun": { "open": "10:00", "close": "20:00" },
+      "summary": "Po–Čt 8:00–21:00, Pá 8:00–22:30, So 9:00–22:30, Ne 10:00–20:00"
+    },
+    "ratings": {
+      "admittedYes": 98,
+      "admittedNo": 2,
+      "cleanlinessSum": 460,
+      "cleanlinessCount": 100
+    },
+    "note": "Toalety jsou v zadní části za barem, 2 schůdky dolů."
+  },
+  {
+    "id": "u-kasny",
+    "name": "Cukrárna U Kašny – ukázka",
+    "address": "Ostrožná 19, 746 01 Opava",
+    "lat": 49.9392,
+    "lng": 17.9038,
+    "barrierFree": true,
+    "changingTable": true,
+    "openingHours": {
+      "mon": { "open": "08:00", "close": "19:00" },
+      "tue": { "open": "08:00", "close": "19:00" },
+      "wed": { "open": "08:00", "close": "19:00" },
+      "thu": { "open": "08:00", "close": "19:00" },
+      "fri": { "open": "08:00", "close": "19:00" },
+      "sat": { "open": "09:00", "close": "19:00" },
+      "sun": { "open": "10:00", "close": "18:00" },
+      "summary": "Po–Pá 8:00–19:00, So 9:00–19:00, Ne 10:00–18:00"
+    },
+    "ratings": {
+      "admittedYes": 210,
+      "admittedNo": 4,
+      "cleanlinessSum": 1025,
+      "cleanlinessCount": 214
+    },
+    "note": "Vybaveno moderním sklopným přebalovacím pultem a bezbariérovým madlem."
+  },
+  {
+    "id": "slezska-basta",
+    "name": "Pekařství Slezská bašta – ukázka",
+    "address": "Pekařská 8, 746 01 Opava",
+    "lat": 49.9405,
+    "lng": 17.9015,
+    "barrierFree": true,
+    "changingTable": false,
+    "openingHours": {
+      "mon": { "open": "06:30", "close": "18:00" },
+      "tue": { "open": "06:30", "close": "18:00" },
+      "wed": { "open": "06:30", "close": "18:00" },
+      "thu": { "open": "06:30", "close": "18:00" },
+      "fri": { "open": "06:30", "close": "18:00" },
+      "sat": { "open": "07:00", "close": "13:00" },
+      "sun": { "open": "08:00", "close": "12:00" },
+      "summary": "Po–Pá 6:30–18:00, So 7:00–13:00, Ne 8:00–12:00"
+    },
+    "ratings": {
+      "admittedYes": 88,
+      "admittedNo": 1,
+      "cleanlinessSum": 420,
+      "cleanlinessCount": 89
+    },
+    "note": "Příjemné čisté zázemí přímo z chodby vedle posezení."
+  },
+  {
+    "id": "ptaci-vrch",
+    "name": "Kavárna Ptačí vrch – ukázka",
+    "address": "Dvořákovy sady 3, 746 01 Opava",
+    "lat": 49.9366,
+    "lng": 17.9012,
+    "barrierFree": true,
+    "changingTable": true,
+    "openingHours": {
+      "mon": { "open": "09:00", "close": "20:00" },
+      "tue": { "open": "09:00", "close": "20:00" },
+      "wed": { "open": "09:00", "close": "20:00" },
+      "thu": { "open": "09:00", "close": "20:00" },
+      "fri": { "open": "09:00", "close": "21:30" },
+      "sat": { "open": "09:00", "close": "21:30" },
+      "sun": { "open": "09:30", "close": "19:30" },
+      "summary": "Po–Čt 9:00–20:00, Pá–So 9:00–21:30, Ne 9:30–19:30"
+    },
+    "ratings": {
+      "admittedYes": 165,
+      "admittedNo": 2,
+      "cleanlinessSum": 798,
+      "cleanlinessCount": 167
+    },
+    "note": "Umístěno v parku, ideální pro rodiny s kočárky a seniory."
+  },
+  {
+    "id": "pod-loubim",
+    "name": "Restaurace Pod Loubím – ukázka",
+    "address": "Masařská 4, 746 01 Opava",
+    "lat": 49.9379,
+    "lng": 17.9063,
+    "barrierFree": false,
+    "changingTable": false,
+    "openingHours": {
+      "mon": { "open": "10:30", "close": "22:00" },
+      "tue": { "open": "10:30", "close": "22:00" },
+      "wed": { "open": "10:30", "close": "22:00" },
+      "thu": { "open": "10:30", "close": "22:00" },
+      "fri": { "open": "10:30", "close": "23:00" },
+      "sat": { "open": "11:00", "close": "23:00" },
+      "sun": { "open": "11:00", "close": "21:00" },
+      "summary": "Po–Čt 10:30–22:00, Pá 10:30–23:00, So 11:00–23:00, Ne 11:00–21:00"
+    },
+    "ratings": {
+      "admittedYes": 115,
+      "admittedNo": 5,
+      "cleanlinessSum": 510,
+      "cleanlinessCount": 120
+    },
+    "note": "Oddělené toalety pro pány a dámy, chodba vlevo od výčepu."
+  },
+  {
+    "id": "hlaska",
+    "name": "Espresso Bar Hláska – ukázka",
+    "address": "Solná 12, 746 01 Opava",
+    "lat": 49.9396,
+    "lng": 17.9008,
+    "barrierFree": true,
+    "changingTable": false,
+    "openingHours": {
+      "mon": { "open": "07:00", "close": "19:00" },
+      "tue": { "open": "07:00", "close": "19:00" },
+      "wed": { "open": "07:00", "close": "19:00" },
+      "thu": { "open": "07:00", "close": "19:00" },
+      "fri": { "open": "07:00", "close": "20:00" },
+      "sat": { "open": "08:30", "close": "19:00" },
+      "sun": { "open": "09:00", "close": "17:00" },
+      "summary": "Po–Čt 7:00–19:00, Pá 7:00–20:00, So 8:30–19:00, Ne 9:00–17:00"
+    },
+    "ratings": {
+      "admittedYes": 178,
+      "admittedNo": 2,
+      "cleanlinessSum": 870,
+      "cleanlinessCount": 180
+    },
+    "note": "Velmi čisté a voňavé WC se zrcadlem a teplou vodou."
+  },
+  {
+    "id": "zamecka-brana",
+    "name": "Kavárna Zámecká brána – ukázka",
+    "address": "Kolářská 7, 746 01 Opava",
+    "lat": 49.9361,
+    "lng": 17.9070,
+    "barrierFree": false,
+    "changingTable": false,
+    "openingHours": {
+      "mon": { "open": "08:30", "close": "19:30" },
+      "tue": { "open": "08:30", "close": "19:30" },
+      "wed": { "open": "08:30", "close": "19:30" },
+      "thu": { "open": "08:30", "close": "19:30" },
+      "fri": { "open": "08:30", "close": "21:00" },
+      "sat": { "open": "09:00", "close": "21:00" },
+      "sun": { "open": "10:00", "close": "18:00" },
+      "summary": "Po–Čt 8:30–19:30, Pá 8:30–21:00, So 9:00–21:00, Ne 10:00–18:00"
+    },
+    "ratings": {
+      "admittedYes": 74,
+      "admittedNo": 2,
+      "cleanlinessSum": 340,
+      "cleanlinessCount": 76
+    },
+    "note": "Klidné prostředí v historickém domě, značení WC u vnitřního atria."
+  },
+  {
+    "id": "u-parku",
+    "name": "Čajovna U Parku – ukázka",
+    "address": "Sadová 15, 746 01 Opava",
+    "lat": 49.9412,
+    "lng": 17.9054,
+    "barrierFree": true,
+    "changingTable": true,
+    "openingHours": {
+      "mon": { "open": "12:00", "close": "22:00" },
+      "tue": { "open": "12:00", "close": "22:00" },
+      "wed": { "open": "12:00", "close": "22:00" },
+      "thu": { "open": "12:00", "close": "22:00" },
+      "fri": { "open": "12:00", "close": "23:00" },
+      "sat": { "open": "13:00", "close": "23:00" },
+      "sun": { "open": "13:00", "close": "21:00" },
+      "summary": "Po–Čt 12:00–22:00, Pá 12:00–23:00, So 13:00–23:00, Ne 13:00–21:00"
+    },
+    "ratings": {
+      "admittedYes": 92,
+      "admittedNo": 1,
+      "cleanlinessSum": 445,
+      "cleanlinessCount": 93
+    },
+    "note": "Velkorysé bezbariérové toalety s přebalovákem, dostupné i z terasy."
+  },
+  {
+    "id": "za-radnici",
+    "name": "Bistro Za Radnicí – ukázka",
+    "address": "Mnišská 2, 746 01 Opava",
+    "lat": 49.9381,
+    "lng": 17.8996,
+    "barrierFree": false,
+    "changingTable": false,
+    "openingHours": {
+      "mon": { "open": "08:00", "close": "20:00" },
+      "tue": { "open": "08:00", "close": "20:00" },
+      "wed": { "open": "08:00", "close": "20:00" },
+      "thu": { "open": "08:00", "close": "20:00" },
+      "fri": { "open": "08:00", "close": "21:00" },
+      "sat": { "open": "09:00", "close": "21:00" },
+      "sun": { "open": "10:00", "close": "18:00" },
+      "summary": "Po–Čt 8:00–20:00, Pá 8:00–21:00, So 9:00–21:00, Ne 10:00–18:00"
+    },
+    "ratings": {
+      "admittedYes": 134,
+      "admittedNo": 3,
+      "cleanlinessSum": 625,
+      "cleanlinessCount": 137
+    },
+    "note": "Přímo u pěší zóny za radniční věží, rychlý přístup."
+  }
+]

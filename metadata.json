@@ -1,0 +1,6 @@
+{
+  "name": "Odskoč si – Síť toalet zdarma v kavárnách a restauracích",
+  "description": "Síť toalet zdarma v kavárnách a restauracích. Připravujeme první města, spouštíme na jaře 2027.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
