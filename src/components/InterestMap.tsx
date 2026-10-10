@@ -18,6 +18,8 @@ export interface ApiPlace {
   poznamka?: string;
   note?: string;
   email?: string;
+  overeno?: boolean | string | number;
+  verified?: boolean | string | number;
 }
 
 interface InterestMapProps {
@@ -192,6 +194,8 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
   }, []);
 
   // 3. Vykreslení bodů z API
+  // Body bez ověření (overeno: false) = menší poloprůhledný žlutý kroužek. Popup: jen „Tip na WC – [město]“
+  // Ověřené body (overeno: true):
   // typ „tip“ = žlutý kroužek
   // „zajem“ = žlutý kroužek s modrým okrajem
   // „misto“ = modrý pin s bílým „WC“
@@ -211,82 +215,122 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
 
       if (isNaN(pLat) || isNaN(pLng)) return;
 
-      const rawTyp = (place.typ || place.type || 'tip').toLowerCase().trim();
-      let icon: L.DivIcon;
+      // Zjištění stavu ověření
+      const rawOvereno = place.overeno !== undefined ? place.overeno : place.verified;
+      const isUnverified =
+        rawOvereno === false ||
+        rawOvereno === 'false' ||
+        rawOvereno === 'FALSE' ||
+        rawOvereno === 0 ||
+        rawOvereno === '0';
 
-      if (rawTyp === 'misto' || rawTyp === 'místo') {
-        // typ „misto“ = modrý pin s bílým „WC“
-        icon = L.divIcon({
-          className: 'marker-misto-icon',
-          html: `
-            <div style="width: 28px; height: 36px; cursor: pointer; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.35));">
-              <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 0C6.268 0 0 6.268 0 14C0 23.5 12 34.5 14 36C16 34.5 28 23.5 28 14C28 6.268 21.732 0 14 0Z" fill="#14294B"/>
-                <circle cx="14" cy="14" r="10.5" fill="#1E3A67"/>
-                <text x="14" y="15" fill="#FFFFFF" font-family="'Overpass', system-ui, sans-serif" font-weight="900" font-size="10.5" text-anchor="middle" dominant-baseline="central">WC</text>
-              </svg>
-            </div>
-          `,
-          iconSize: [28, 36],
-          iconAnchor: [14, 36],
-          popupAnchor: [0, -36],
-        });
-      } else if (rawTyp === 'zajem' || rawTyp === 'zájem') {
-        // „zajem“ = žlutý kroužek s modrým okrajem
-        icon = L.divIcon({
-          className: 'marker-zajem-icon',
-          html: `
-            <div style="
-              width: 16px;
-              height: 16px;
-              background-color: #F5B700;
-              border: 3px solid #14294B;
-              border-radius: 50%;
-              box-shadow: 0 2px 6px rgba(0,0,0,0.35);
-              cursor: pointer;
-            "></div>
-          `,
-          iconSize: [16, 16],
-          iconAnchor: [8, 8],
-          popupAnchor: [0, -10],
-        });
-      } else {
-        // typ „tip“ = žlutý kroužek
-        icon = L.divIcon({
-          className: 'marker-tip-icon',
-          html: `
-            <div style="
-              width: 14px;
-              height: 14px;
-              background-color: #F5B700;
-              border: 1px solid rgba(20, 41, 75, 0.4);
-              border-radius: 50%;
-              box-shadow: 0 2px 5px rgba(0,0,0,0.3);
-              cursor: pointer;
-            "></div>
-          `,
-          iconSize: [14, 14],
-          iconAnchor: [7, 7],
-          popupAnchor: [0, -8],
-        });
-      }
-
-      const marker = L.marker([pLat, pLng], { icon });
-
-      // Popup: název, město, adresa, poznámka
       const nazev = place.nazev || place.name || '';
       const mesto = place.mesto || place.city || '';
       const adresa = place.adresa || place.address || '';
       const poznamka = place.poznamka || place.note || '';
 
-      const popupHtml = `
-        <div style="font-family: 'Overpass', sans-serif; min-width: 160px; max-width: 260px; color: #14294B; text-align: left; padding: 4px;">
-          ${nazev ? `<div style="font-weight: 900; font-size: 15px; margin-bottom: 2px;">${escapeHtml(nazev)}</div>` : ''}
-          ${mesto ? `<div style="font-weight: 700; font-size: 13px; color: #1E3A67;">${escapeHtml(mesto)}</div>` : ''}
-          ${adresa ? `<div style="font-size: 12px; color: #475569; margin-top: 2px;">${escapeHtml(adresa)}</div>` : ''}
-          ${poznamka ? `<div style="font-size: 12px; color: #14294B; font-style: italic; margin-top: 6px; padding-top: 4px; border-top: 1px solid #E2E8F0;">„${escapeHtml(poznamka)}“</div>` : ''}
-        </div>
-      `;
+      let icon: L.DivIcon;
+      let popupHtml: string;
+
+      if (isUnverified) {
+        // Body bez ověření (overeno: false) zobraz jako menší poloprůhledný žlutý kroužek.
+        // Popup: jen „Tip na WC – [město]“.
+        icon = L.divIcon({
+          className: 'marker-unverified-tip-icon',
+          html: `
+            <div style="
+              width: 10px;
+              height: 10px;
+              background-color: rgba(245, 183, 0, 0.7);
+              border: 1.5px solid rgba(20, 41, 75, 0.6);
+              border-radius: 50%;
+              box-shadow: 0 1px 3px rgba(0,0,0,0.25);
+              cursor: pointer;
+            "></div>
+          `,
+          iconSize: [10, 10],
+          iconAnchor: [5, 5],
+          popupAnchor: [0, -6],
+        });
+
+        const mestoDisplay = mesto.trim() ? ` – ${escapeHtml(mesto.trim())}` : '';
+        popupHtml = `
+          <div style="font-family: 'Overpass', sans-serif; font-weight: 800; font-size: 13px; color: #14294B; text-align: left; padding: 2px 4px; white-space: nowrap;">
+            Tip na WC${mestoDisplay}
+          </div>
+        `;
+      } else {
+        // Ověřené body (overeno: true) zobraz jako dosud, s názvem, adresou a poznámkou.
+        const rawTyp = (place.typ || place.type || 'tip').toLowerCase().trim();
+
+        if (rawTyp === 'misto' || rawTyp === 'místo') {
+          // typ „misto“ = modrý pin s bílým „WC“
+          icon = L.divIcon({
+            className: 'marker-misto-icon',
+            html: `
+              <div style="width: 28px; height: 36px; cursor: pointer; filter: drop-shadow(0 2px 5px rgba(0,0,0,0.35));">
+                <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 0C6.268 0 0 6.268 0 14C0 23.5 12 34.5 14 36C16 34.5 28 23.5 28 14C28 6.268 21.732 0 14 0Z" fill="#14294B"/>
+                  <circle cx="14" cy="14" r="10.5" fill="#1E3A67"/>
+                  <text x="14" y="15" fill="#FFFFFF" font-family="'Overpass', system-ui, sans-serif" font-weight="900" font-size="10.5" text-anchor="middle" dominant-baseline="central">WC</text>
+                </svg>
+              </div>
+            `,
+            iconSize: [28, 36],
+            iconAnchor: [14, 36],
+            popupAnchor: [0, -36],
+          });
+        } else if (rawTyp === 'zajem' || rawTyp === 'zájem') {
+          // „zajem“ = žlutý kroužek s modrým okrajem
+          icon = L.divIcon({
+            className: 'marker-zajem-icon',
+            html: `
+              <div style="
+                width: 16px;
+                height: 16px;
+                background-color: #F5B700;
+                border: 3px solid #14294B;
+                border-radius: 50%;
+                box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+                cursor: pointer;
+              "></div>
+            `,
+            iconSize: [16, 16],
+            iconAnchor: [8, 8],
+            popupAnchor: [0, -10],
+          });
+        } else {
+          // typ „tip“ = žlutý kroužek
+          icon = L.divIcon({
+            className: 'marker-tip-icon',
+            html: `
+              <div style="
+                width: 14px;
+                height: 14px;
+                background-color: #F5B700;
+                border: 1px solid rgba(20, 41, 75, 0.4);
+                border-radius: 50%;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+                cursor: pointer;
+              "></div>
+            `,
+            iconSize: [14, 14],
+            iconAnchor: [7, 7],
+            popupAnchor: [0, -8],
+          });
+        }
+
+        popupHtml = `
+          <div style="font-family: 'Overpass', sans-serif; min-width: 160px; max-width: 260px; color: #14294B; text-align: left; padding: 4px;">
+            ${nazev ? `<div style="font-weight: 900; font-size: 15px; margin-bottom: 2px;">${escapeHtml(nazev)}</div>` : ''}
+            ${mesto ? `<div style="font-weight: 700; font-size: 13px; color: #1E3A67;">${escapeHtml(mesto)}</div>` : ''}
+            ${adresa ? `<div style="font-size: 12px; color: #475569; margin-top: 2px;">${escapeHtml(adresa)}</div>` : ''}
+            ${poznamka ? `<div style="font-size: 12px; color: #14294B; font-style: italic; margin-top: 6px; padding-top: 4px; border-top: 1px solid #E2E8F0;">„${escapeHtml(poznamka)}“</div>` : ''}
+          </div>
+        `;
+      }
+
+      const marker = L.marker([pLat, pLng], { icon });
       marker.bindPopup(popupHtml);
       layerGroupRef.current?.addLayer(marker);
     });
@@ -326,7 +370,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
 
     // Honeypot proti spamu: pokud je pole website vyplněné, formulář nic neodešle
     if (formWebsite.trim() !== '') {
-      setSuccessMessage('Díky! Tip se na mapě objeví po schválení.');
+      setSuccessMessage('Díky! Váš tip je na mapě.');
       clearForm();
       return;
     }
@@ -406,9 +450,10 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
         }),
       });
 
-      // Po odeslání ukaž „Díky! Tip se na mapě objeví po schválení.“ a formulář vyčisti.
-      setSuccessMessage('Díky! Tip se na mapě objeví po schválení.');
+      // Po odeslání ukaž „Díky! Váš tip je na mapě.“ a formulář vyčisti, znovu načti body z API
+      setSuccessMessage('Díky! Váš tip je na mapě.');
       clearForm();
+      fetchPlaces();
     } catch (err) {
       console.error('Chyba při odesílání tipu:', err);
       setErrorMessage('Omlouváme se, došlo k chybě při odesílání. Zkuste to prosím znovu.');
@@ -465,15 +510,10 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
         </div>
 
         {/* Instrukční lišta pro uživatele */}
-        <div className="p-3 bg-[#14294B] text-white rounded-[6px] text-sm flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2.5">
-          <div className="flex items-center gap-2">
-            <span className="w-3.5 h-3.5 rounded-full bg-[#F5B700] shrink-0 border border-[#14294B]" aria-hidden="true" />
-            <span className="font-['Overpass',sans-serif] font-[800]">
-              Kliknutím do mapy označíte přesnou polohu, kde vám WC chybí
-            </span>
-          </div>
-          <span className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-xs text-slate-300">
-            Výchozí pohled: celá ČR (OpenStreetMap)
+        <div className="p-3 bg-[#14294B] text-white rounded-[6px] text-sm flex items-center gap-2">
+          <span className="w-3.5 h-3.5 rounded-full bg-[#F5B700] shrink-0 border border-[#14294B]" aria-hidden="true" />
+          <span className="font-['Overpass',sans-serif] font-[800]">
+            Kliknutím do mapy označíte přesnou polohu, kde vám WC chybí
           </span>
         </div>
 

@@ -144,10 +144,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   Slovo „WC“ v hranatém žlutém štítku (#F5B700, text #14294B, zaoblení 8 px, vnitřní okraj 0 8px)
                   a zbytek bílý. „Bez nákupu.“ na druhém řádku žlutě. */}
               <h1 className="font-['Overpass',sans-serif] font-[900] text-[40px] sm:text-[56px] lg:text-[68px] leading-[1.0] tracking-[-0.5px] text-left">
-                <span className="inline-block bg-[#F5B700] text-[#14294B] rounded-[8px] px-2.5 py-0.5 mr-2.5 align-baseline select-none">
+                <span className="badge badge-wc bg-[#F5B700] text-[#14294B] mr-2.5 align-baseline select-none">
                   WC
                 </span>
-                <span className="text-white">zdarma.</span>
+                <span className="text-white align-baseline">zdarma.</span>
                 <span className="block text-[#F5B700] mt-1.5 sm:mt-2">Bez nákupu.</span>
               </h1>
 
@@ -158,7 +158,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
 
               {/* Jednoduchý žlutý štítek „Spouštíme na jaře 2027“ */}
               <div className="pt-1">
-                <span className="inline-flex items-center bg-[#F5B700] text-[#14294B] font-['Overpass',sans-serif] font-[900] text-sm sm:text-base px-3.5 py-1.5 rounded-[8px] uppercase tracking-wider">
+                <span className="badge badge-start bg-[#F5B700] text-[#14294B] font-['Overpass',sans-serif] font-[900] text-sm sm:text-base uppercase tracking-wider">
                   Spouštíme na jaře 2027
                 </span>
               </div>

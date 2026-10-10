@@ -144,3 +144,18 @@
   }
 }
 
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  text-box: trim-both cap alphabetic;   /* ořízne prázdné místo nad a pod písmem */
+}
+.badge-wc    { padding: 0.16em 0.2em; border-radius: 0.14em; vertical-align: baseline; }
+.badge-start { padding: 14px 24px; border-radius: 10px; }
+
+@supports not (text-box: trim-both cap alphabetic) {
+  .badge-wc    { padding: 0.2em 0.2em 0.1em; }
+  .badge-start { padding: 17px 24px 12px; }
+}
+
