@@ -15,7 +15,7 @@
   }
 
   body {
-    font-family: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 18px;
     line-height: 1.5;
     background-color: #FFFFFF;
@@ -27,9 +27,9 @@
     overflow-x: hidden;
   }
 
-  /* Headings: Overpass 800/900, left-aligned, letter-spacing -0.5px, line-height 1.0 */
+  /* Headings: Archivo 800/900, left-aligned, letter-spacing -0.5px, line-height 1.0 */
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 900;
     letter-spacing: -0.5px;
     line-height: 1.0;
@@ -38,40 +38,40 @@
 
   /* Buttons & Numbers */
   button {
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-weight: 800;
     letter-spacing: -0.2px;
   }
 
   input, select, textarea {
-    font-family: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', sans-serif;
+    font-family: 'Archivo', sans-serif;
     font-size: 16px;
     line-height: 1.5;
   }
 }
 
 .font-heading {
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: 900;
   letter-spacing: -0.5px;
   line-height: 1.0;
 }
 
 .font-button {
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: 800;
   letter-spacing: -0.3px;
 }
 
 .font-body {
-  font-family: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-size: 18px;
   line-height: 1.5;
 }
 
-/* Distances & times: Overpass 800, font-variant-numeric: tabular-nums */
+/* Distances & times: Archivo 800, font-variant-numeric: tabular-nums */
 .tabular-nums {
-  font-family: 'Overpass', sans-serif;
+  font-family: 'Archivo', sans-serif;
   font-weight: 800;
   font-variant-numeric: tabular-nums;
   letter-spacing: -0.5px;
@@ -79,7 +79,7 @@
 
 /* Leaflet Clean Up for Municipal Transit Map */
 .leaflet-container {
-  font-family: 'Overpass', sans-serif !important;
+  font-family: 'Archivo', sans-serif !important;
   width: 100%;
   height: 100%;
   background: #E8ECEF !important;
@@ -99,7 +99,7 @@
 
 /* Clean minimal attribution */
 .leaflet-control-attribution {
-  font-family: 'Atkinson Hyperlegible Next', 'Atkinson Hyperlegible', sans-serif !important;
+  font-family: 'Archivo', sans-serif !important;
   font-size: 10px !important;
   background: rgba(255, 255, 255, 0.85) !important;
   color: #64748B !important;
@@ -121,7 +121,7 @@
   width: 36px !important;
   height: 36px !important;
   line-height: 36px !important;
-  font-family: 'Overpass', sans-serif !important;
+  font-family: 'Archivo', sans-serif !important;
   font-weight: 900 !important;
   font-size: 16px !important;
 }
@@ -142,20 +142,5 @@
   .logo-bounce-once {
     animation: logoHop 600ms ease-out 1;
   }
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1;
-  text-box: trim-both cap alphabetic;   /* ořízne prázdné místo nad a pod písmem */
-}
-.badge-wc    { padding: 0.16em 0.2em; border-radius: 0.14em; vertical-align: baseline; }
-.badge-start { padding: 14px 24px; border-radius: 10px; }
-
-@supports not (text-box: trim-both cap alphabetic) {
-  .badge-wc    { padding: 0.2em 0.2em 0.1em; }
-  .badge-start { padding: 17px 24px 12px; }
 }
 

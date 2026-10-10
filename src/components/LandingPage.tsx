@@ -106,7 +106,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
     },
     {
       q: 'Je to pro veřejnost skutečně zdarma?',
-      a: 'Ano, pro návštěvníky zcela zdarma. Provozování toalet kompenzuje město či region formou stálého měsíčního nájmu 2 000 Kč přímo zapojeným kavárnám a restauracím.',
+      a: 'Ano, pro návštěvníky zcela zdarma. Provoz toalet platí město nebo region a zapojené kavárny a restaurace dostávají každý měsíc pevnou odměnu.',
     },
     {
       q: 'Kdy a kde síť Odskoč si odstartuje?',
@@ -114,7 +114,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
     },
     {
       q: 'Může personál podniku někoho na WC nevpustit?',
-      a: 'Ano. Pravidla sítě garantují personálu plné právo vykázat nebo odmítnout zjevně agresivní, podnapilé či znečištěné osoby k ochraně bezpečí zaměstnanců a stávajících hostů.',
+      a: 'Ano. Podnik může odmítnout osoby pod vlivem alkoholu či drog a osoby, které se chovají agresivně nebo narušují provoz.',
     },
     {
       q: 'Potřebuji do mobilu nějakou aplikaci?',
@@ -131,7 +131,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
   ];
 
   return (
-    <div className="w-full text-left font-['Atkinson_Hyperlegible_Next','Atkinson_Hyperlegible',sans-serif] bg-white text-[#14294B]">
+    <div className="w-full text-left font-['Archivo',sans-serif] bg-white text-[#14294B]">
       {/* ========================================================= */}
       {/* 1. HERO SECTION                                           */}
       {/* ========================================================= */}
@@ -143,8 +143,19 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               {/* Hlavní nadpis dle zadání:
                   Slovo „WC“ v hranatém žlutém štítku (#F5B700, text #14294B, zaoblení 8 px, vnitřní okraj 0 8px)
                   a zbytek bílý. „Bez nákupu.“ na druhém řádku žlutě. */}
-              <h1 className="font-['Overpass',sans-serif] font-[900] text-[40px] sm:text-[56px] lg:text-[68px] leading-[1.0] tracking-[-0.5px] text-left">
-                <span className="badge badge-wc bg-[#F5B700] text-[#14294B] mr-2.5 align-baseline select-none">
+              <h1 className="font-['Archivo',sans-serif] font-[900] text-[40px] sm:text-[56px] lg:text-[68px] leading-[1.0] tracking-[-0.5px] text-left">
+                <span
+                  style={{
+                    display: 'inline-block',
+                    lineHeight: 1,
+                    padding: '0.13em 0.2em 0.11em',
+                    borderRadius: '0.14em',
+                    verticalAlign: 'baseline',
+                    background: '#F5B700',
+                    color: '#14294B',
+                  }}
+                  className="mr-2.5 select-none"
+                >
                   WC
                 </span>
                 <span className="text-white align-baseline">zdarma.</span>
@@ -152,13 +163,23 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               </h1>
 
               {/* Podnadpis dle zadání */}
-              <p className="font-['Atkinson_Hyperlegible_Next','Atkinson_Hyperlegible',sans-serif] text-[18px] sm:text-[21px] text-white/90 leading-[1.4] max-w-[55ch] font-medium">
+              <p className="font-['Archivo',sans-serif] text-[18px] sm:text-[21px] text-white/90 leading-[1.4] max-w-[55ch] font-medium">
                 Kavárny a restaurace, kde si odskočíte zdarma a bez ptaní. Síť právě vzniká, pomozte nám vybrat místa.
               </p>
 
               {/* Jednoduchý žlutý štítek „Spouštíme na jaře 2027“ */}
               <div className="pt-1">
-                <span className="badge badge-start bg-[#F5B700] text-[#14294B] font-['Overpass',sans-serif] font-[900] text-sm sm:text-base uppercase tracking-wider">
+                <span
+                  style={{
+                    display: 'inline-block',
+                    lineHeight: 1,
+                    padding: '15px 24px 13px',
+                    borderRadius: '10px',
+                    background: '#F5B700',
+                    color: '#14294B',
+                  }}
+                  className="font-['Archivo',sans-serif] font-[900] text-sm sm:text-base uppercase tracking-wider select-none"
+                >
                   Spouštíme na jaře 2027
                 </span>
               </div>
@@ -167,7 +188,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
 
           {/* Rozcestník – tři cesty (karty vedle sebe na desktopu, na mobilu pod sebou) */}
           <div className="mt-12 sm:mt-16 pt-8 border-t border-[#1E3A67]">
-            <div className="text-xl sm:text-2xl font-['Overpass',sans-serif] font-[900] text-[#F5B700] uppercase tracking-wider mb-4">
+            <div className="text-xl sm:text-2xl font-['Archivo',sans-serif] font-[900] text-[#F5B700] uppercase tracking-wider mb-4">
               Kdo jste?
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-5">
@@ -178,13 +199,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                 className="group bg-[#1E3560] hover:bg-[#254277] border-2 border-[#2B4B85] hover:border-[#F5B700] p-5 sm:p-6 rounded-[10px] text-left transition-all duration-150 cursor-pointer flex flex-col justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5B700]"
               >
                 <div>
-                  <div className="font-['Overpass',sans-serif] font-[900] text-[20px] sm:text-[22px] text-white tracking-[-0.5px] leading-tight mb-2 flex items-center justify-between">
+                  <div className="font-['Archivo',sans-serif] font-[900] text-[20px] sm:text-[22px] text-white tracking-[-0.5px] leading-tight mb-2 flex items-center justify-between">
                     <span>Město nebo region</span>
                     <span className="text-[#F5B700] text-[22px] font-[900] transition-transform duration-150 group-hover:translate-x-1.5 shrink-0 ml-2" aria-hidden="true">
                       →
                     </span>
                   </div>
-                  <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[15px] sm:text-[16px] text-slate-200 leading-[1.4]">
+                  <p className="font-['Archivo',sans-serif] text-[15px] sm:text-[16px] text-slate-200 leading-[1.4]">
                     Veřejná WC v centru bez stavby a investic. Podniky zajistíme my, vy platíte jednu fakturu.
                   </p>
                 </div>
@@ -197,13 +218,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                 className="group bg-[#1E3560] hover:bg-[#254277] border-2 border-[#2B4B85] hover:border-[#F5B700] p-5 sm:p-6 rounded-[10px] text-left transition-all duration-150 cursor-pointer flex flex-col justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5B700]"
               >
                 <div>
-                  <div className="font-['Overpass',sans-serif] font-[900] text-[20px] sm:text-[22px] text-white tracking-[-0.5px] leading-tight mb-2 flex items-center justify-between">
+                  <div className="font-['Archivo',sans-serif] font-[900] text-[20px] sm:text-[22px] text-white tracking-[-0.5px] leading-tight mb-2 flex items-center justify-between">
                     <span>Kavárna nebo restaurace</span>
                     <span className="text-[#F5B700] text-[22px] font-[900] transition-transform duration-150 group-hover:translate-x-1.5 shrink-0 ml-2" aria-hidden="true">
                       →
                     </span>
                   </div>
-                  <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[15px] sm:text-[16px] text-slate-200 leading-[1.4]">
+                  <p className="font-['Archivo',sans-serif] text-[15px] sm:text-[16px] text-slate-200 leading-[1.4]">
                     Pusťte lidi na toaletu a dostávejte 2 000 Kč každý měsíc. Nálepku i zápis do map zařídíme my.
                   </p>
                 </div>
@@ -216,13 +237,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                 className="group bg-[#1E3560] hover:bg-[#254277] border-2 border-[#F5B700] hover:border-[#F5B700] p-5 sm:p-6 rounded-[10px] text-left transition-all duration-150 cursor-pointer flex flex-col justify-between focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5B700] ring-1 ring-[#F5B700]/30 shadow-md shadow-[#F5B700]/10"
               >
                 <div>
-                  <div className="font-['Overpass',sans-serif] font-[900] text-[20px] sm:text-[22px] text-[#F5B700] tracking-[-0.5px] leading-tight mb-2 flex items-center justify-between">
+                  <div className="font-['Archivo',sans-serif] font-[900] text-[20px] sm:text-[22px] text-[#F5B700] tracking-[-0.5px] leading-tight mb-2 flex items-center justify-between">
                     <span>Chybí vám WC ve městě?</span>
                     <span className="text-[#F5B700] text-[22px] font-[900] transition-transform duration-150 group-hover:translate-x-1.5 shrink-0 ml-2" aria-hidden="true">
                       →
                     </span>
                   </div>
-                  <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[15px] sm:text-[16px] text-slate-100 leading-[1.4]">
+                  <p className="font-['Archivo',sans-serif] text-[15px] sm:text-[16px] text-slate-100 leading-[1.4]">
                     Dejte nám tip, kde toaleta chybí. Ukážeme to vaší radnici.
                   </p>
                 </div>
@@ -252,28 +273,28 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
         <div className="max-w-6xl mx-auto space-y-12">
           {/* Header sekce */}
           <div className="max-w-3xl space-y-4">
-            <div className="text-xs font-['Overpass',sans-serif] font-[900] text-[#F5B700] uppercase tracking-wider">
+            <div className="text-xs font-['Archivo',sans-serif] font-[900] text-[#F5B700] uppercase tracking-wider">
               Partnerství pro samosprávy
             </div>
-            <h2 className="font-['Overpass',sans-serif] font-[900] text-[34px] sm:text-[46px] leading-[1.05] tracking-[-0.5px] text-white">
+            <h2 className="font-['Archivo',sans-serif] font-[900] text-[34px] sm:text-[46px] leading-[1.05] tracking-[-0.5px] text-white">
               Síť veřejných toalet pro města a regiony. Bez stavby a bez investice.
             </h2>
-            <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[18px] sm:text-[19px] text-white/90 leading-[1.5]">
+            <p className="font-['Archivo',sans-serif] text-[18px] sm:text-[19px] text-white/90 leading-[1.5]">
               Využijte existující zázemí restaurací a kaváren v centru, u náměstí, cyklostezek a turistických cílů. Jedna smlouva, jedna faktura měsíčně, nulová administrativa s jednotlivými provozovnami.
             </p>
           </div>
 
           {/* Čtyři kroky realizace */}
           <div>
-            <div className="text-xs font-['Overpass',sans-serif] font-[900] text-[#F5B700] uppercase tracking-wider mb-4">
+            <div className="text-xs font-['Archivo',sans-serif] font-[900] text-[#F5B700] uppercase tracking-wider mb-4">
               Jak funguje realizace ve 4 krocích:
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="p-5 bg-[#1E3560] border border-[#2B4B85] rounded-[8px] space-y-2">
-                <div className="font-['Overpass',sans-serif] font-[900] text-[#F5B700] text-[24px] tabular-nums leading-none">
+                <div className="font-['Archivo',sans-serif] font-[900] text-[#F5B700] text-[24px] tabular-nums leading-none">
                   01
                 </div>
-                <div className="font-['Overpass',sans-serif] font-[900] text-[18px] text-white leading-snug">
+                <div className="font-['Archivo',sans-serif] font-[900] text-[18px] text-white leading-snug">
                   Vybereme a podepíšeme podniky
                 </div>
                 <p className="text-[14px] text-slate-200 leading-relaxed">
@@ -282,10 +303,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               </div>
 
               <div className="p-5 bg-[#1E3560] border border-[#2B4B85] rounded-[8px] space-y-2">
-                <div className="font-['Overpass',sans-serif] font-[900] text-[#F5B700] text-[24px] tabular-nums leading-none">
+                <div className="font-['Archivo',sans-serif] font-[900] text-[#F5B700] text-[24px] tabular-nums leading-none">
                   02
                 </div>
-                <div className="font-['Overpass',sans-serif] font-[900] text-[18px] text-white leading-snug">
+                <div className="font-['Archivo',sans-serif] font-[900] text-[18px] text-white leading-snug">
                   Označíme a zapíšeme do map
                 </div>
                 <p className="text-[14px] text-slate-200 leading-relaxed">
@@ -294,10 +315,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               </div>
 
               <div className="p-5 bg-[#1E3560] border border-[#2B4B85] rounded-[8px] space-y-2">
-                <div className="font-['Overpass',sans-serif] font-[900] text-[#F5B700] text-[24px] tabular-nums leading-none">
+                <div className="font-['Archivo',sans-serif] font-[900] text-[#F5B700] text-[24px] tabular-nums leading-none">
                   03
                 </div>
-                <div className="font-['Overpass',sans-serif] font-[900] text-[18px] text-white leading-snug">
+                <div className="font-['Archivo',sans-serif] font-[900] text-[18px] text-white leading-snug">
                   Hlídáme kvalitu
                 </div>
                 <p className="text-[14px] text-slate-200 leading-relaxed">
@@ -306,10 +327,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               </div>
 
               <div className="p-5 bg-[#1E3560] border border-[#2B4B85] rounded-[8px] space-y-2">
-                <div className="font-['Overpass',sans-serif] font-[900] text-[#F5B700] text-[24px] tabular-nums leading-none">
+                <div className="font-['Archivo',sans-serif] font-[900] text-[#F5B700] text-[24px] tabular-nums leading-none">
                   04
                 </div>
-                <div className="font-['Overpass',sans-serif] font-[900] text-[18px] text-white leading-snug">
+                <div className="font-['Archivo',sans-serif] font-[900] text-[18px] text-white leading-snug">
                   Vyplácíme podniky a reportujeme
                 </div>
                 <p className="text-[14px] text-slate-200 leading-relaxed">
@@ -323,7 +344,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             {/* Blok: Pro mikroregiony a turistické oblasti */}
             <div className="p-6 sm:p-7 bg-[#1A3158] border-2 border-[#F5B700] rounded-[8px] space-y-3">
-              <div className="flex items-center gap-2 font-['Overpass',sans-serif] font-[900] text-[#F5B700] text-[20px]">
+              <div className="flex items-center gap-2 font-['Archivo',sans-serif] font-[900] text-[#F5B700] text-[20px]">
                 <Compass size={22} className="text-[#F5B700]" />
                 <span>Pro mikroregiony a turistické oblasti</span>
               </div>
@@ -337,7 +358,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
 
             {/* Blok: Zkušební provoz bez rizika */}
             <div className="p-6 sm:p-7 bg-[#1E3560] border-2 border-slate-300 rounded-[8px] space-y-3">
-              <div className="flex items-center gap-2 font-['Overpass',sans-serif] font-[900] text-white text-[20px]">
+              <div className="flex items-center gap-2 font-['Archivo',sans-serif] font-[900] text-white text-[20px]">
                 <ShieldCheck size={22} className="text-[#F5B700]" />
                 <span>Zkušební provoz bez rizika</span>
               </div>
@@ -353,17 +374,17 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
           {/* Kontaktní poptávkový formulář pro města a regiony (žádné ceny na webu) */}
           <div className="bg-white text-[#14294B] rounded-[8px] p-6 sm:p-8 border-2 border-[#F5B700] shadow-xl">
             <div className="max-w-3xl mb-6">
-              <h3 className="font-['Overpass',sans-serif] font-[900] text-[24px] sm:text-[28px] text-[#14294B] leading-tight">
+              <h3 className="font-['Archivo',sans-serif] font-[900] text-[24px] sm:text-[28px] text-[#14294B] leading-tight">
                 Nezávazná poptávka pro město, obec či region
               </h3>
-              <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[16px] text-slate-700 mt-1 font-medium">
+              <p className="font-['Archivo',sans-serif] text-[16px] text-slate-700 mt-1 font-medium">
                 Cenovou nabídku pošleme do 2 pracovních dnů. Připravíme pro vás konkrétní analýzu potenciálu toalet ve vaší lokalitě.
               </p>
             </div>
 
             {citySubmitted ? (
               <div className="p-6 bg-emerald-50 border border-emerald-300 rounded-[6px] space-y-2 text-left">
-                <div className="flex items-center gap-2 font-['Overpass',sans-serif] font-[900] text-emerald-800 text-lg">
+                <div className="flex items-center gap-2 font-['Archivo',sans-serif] font-[900] text-emerald-800 text-lg">
                   <CheckCircle2 size={24} className="text-emerald-600" />
                   <span>Děkujeme! Poptávka byla úspěšně odeslána.</span>
                 </div>
@@ -479,7 +500,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   <button
                     type="submit"
                     disabled={citySubmitting}
-                    className="h-12 px-8 bg-[#F5B700] hover:bg-[#E0A600] active:bg-[#C99500] text-[#14294B] font-['Overpass',sans-serif] font-[900] text-[16px] rounded-[4px] inline-flex items-center gap-2 cursor-pointer transition-colors shadow-sm"
+                    className="h-12 px-8 bg-[#F5B700] hover:bg-[#E0A600] active:bg-[#C99500] text-[#14294B] font-['Archivo',sans-serif] font-[900] text-[16px] rounded-[4px] inline-flex items-center gap-2 cursor-pointer transition-colors shadow-sm"
                   >
                     <Send size={18} />
                     <span>{citySubmitting ? 'Odesílám...' : 'Vyžádat cenovou nabídku'}</span>
@@ -501,19 +522,19 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
           {/* Left: Info, Numbers and Benefits */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="text-xs font-['Overpass',sans-serif] font-[900] text-[#14294B] uppercase tracking-wider">
+            <div className="text-xs font-['Archivo',sans-serif] font-[900] text-[#14294B] uppercase tracking-wider">
               Předregistrace provozoven
             </div>
 
             {/* Velké číslo a tarif Komfort */}
             <div className="space-y-2">
-              <div className="font-['Overpass',sans-serif] font-[900] text-[42px] sm:text-[56px] text-[#14294B] leading-none tracking-tight">
+              <div className="font-['Archivo',sans-serif] font-[900] text-[42px] sm:text-[56px] text-[#14294B] leading-none tracking-tight">
                 2 000 Kč <span className="text-[24px] sm:text-[28px] font-bold text-slate-700">měsíčně</span>
               </div>
               <div className="inline-block bg-[#F5B700]/30 border border-[#F5B700] text-[#14294B] px-3 py-1.5 rounded-[6px] text-sm font-semibold">
                 Komfort s bezbariérovým WC nebo přebalovacím pultem: <strong>2 600 Kč měsíčně</strong>
               </div>
-              <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[17px] text-slate-800 leading-[1.5] pt-1">
+              <p className="font-['Archivo',sans-serif] text-[17px] text-slate-800 leading-[1.5] pt-1">
                 Za to, že pustíte na toaletu i lidi bez nákupu. Vyplácíme jako nájem, každý měsíc.
               </p>
             </div>
@@ -540,7 +561,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
 
             {/* Ukázka nálepky v sekci pro podniky: /odskoc-si-nalepka.webp (fallback .png), max. šířka 360 px */}
             <div className="pt-2">
-              <div className="text-xs font-['Overpass',sans-serif] font-[900] text-slate-600 uppercase tracking-wider mb-2">
+              <div className="text-xs font-['Archivo',sans-serif] font-[900] text-slate-600 uppercase tracking-wider mb-2">
                 Ukázka označení provozovny:
               </div>
               <picture className="block">
@@ -555,7 +576,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
 
             {/* Samostatný zvýrazněný box „Vaše pravidla platí“ */}
             <div className="p-5 bg-[#14294B] text-white rounded-[8px] border-l-4 border-[#F5B700] space-y-2 shadow-sm">
-              <div className="font-['Overpass',sans-serif] font-[900] text-[18px] text-[#F5B700]">
+              <div className="font-['Archivo',sans-serif] font-[900] text-[18px] text-[#F5B700]">
                 Vaše pravidla platí
               </div>
               <p className="text-[15px] text-slate-100 leading-relaxed font-normal">
@@ -567,7 +588,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
           {/* Right: Předregistrační formulář podniku */}
           <div className="lg:col-span-6 bg-white border-2 border-[#14294B] rounded-[8px] p-6 sm:p-8 space-y-4 shadow-sm">
             <div className="border-b border-slate-200 pb-3">
-              <h3 className="font-['Overpass',sans-serif] font-[900] text-[22px] text-[#14294B] leading-tight">
+              <h3 className="font-['Archivo',sans-serif] font-[900] text-[22px] text-[#14294B] leading-tight">
                 Nezávazná předregistrace podniku
               </h3>
               <p className="text-xs text-slate-600 mt-1">
@@ -577,7 +598,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
 
             {businessSubmitted ? (
               <div className="p-5 bg-emerald-50 border border-emerald-300 rounded-[6px] space-y-2">
-                <div className="flex items-center gap-2 font-['Overpass',sans-serif] font-[900] text-emerald-800 text-base">
+                <div className="flex items-center gap-2 font-['Archivo',sans-serif] font-[900] text-emerald-800 text-base">
                   <CheckCircle2 size={20} className="text-emerald-600" />
                   <span>Děkujeme! Váš podnik byl zaevidován.</span>
                 </div>
@@ -732,7 +753,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   <button
                     type="submit"
                     disabled={businessSubmitting}
-                    className="w-full h-12 bg-[#14294B] hover:bg-[#1E3A67] active:bg-[#0D1C34] text-white font-['Overpass',sans-serif] font-[900] text-[15px] rounded-[4px] transition-colors cursor-pointer"
+                    className="w-full h-12 bg-[#14294B] hover:bg-[#1E3A67] active:bg-[#0D1C34] text-white font-['Archivo',sans-serif] font-[900] text-[15px] rounded-[4px] transition-colors cursor-pointer"
                   >
                     {businessSubmitting ? 'Odesílám...' : 'Odeslat nezávaznou předregistraci'}
                   </button>
@@ -752,10 +773,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
       >
         <div className="max-w-4xl mx-auto space-y-8">
           <div>
-            <h2 className="font-['Overpass',sans-serif] font-[900] text-[34px] sm:text-[44px] text-[#14294B] leading-[1.0] tracking-[-0.5px] mb-3 text-left">
+            <h2 className="font-['Archivo',sans-serif] font-[900] text-[34px] sm:text-[44px] text-[#14294B] leading-[1.0] tracking-[-0.5px] mb-3 text-left">
               Časté dotazy (FAQ)
             </h2>
-            <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[18px] text-slate-700">
+            <p className="font-['Archivo',sans-serif] text-[18px] text-slate-700">
               Vše, co potřebujete vědět o přípravě sítě toalet a spuštění na jaře 2027.
             </p>
           </div>
@@ -774,7 +795,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                     className="w-full p-4 sm:p-5 text-left flex items-center justify-between gap-4 cursor-pointer focus:outline-none focus-visible:bg-slate-100"
                     aria-expanded={isOpen}
                   >
-                    <span className="font-['Overpass',sans-serif] font-[800] text-[17px] text-[#14294B] leading-[1.2]">
+                    <span className="font-['Archivo',sans-serif] font-[800] text-[17px] text-[#14294B] leading-[1.2]">
                       {item.q}
                     </span>
                     <ChevronDown
@@ -807,24 +828,23 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
             {/* Left: Logo */}
             <div className="md:col-span-6 space-y-4">
               <Logo variant="dark" height={40} />
-              <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-[16px] text-slate-200 max-w-sm leading-[1.5]">
+              <p className="font-['Archivo',sans-serif] text-[16px] text-slate-200 max-w-sm leading-[1.5]">
                 WC zdarma. Bez nákupu v kavárnách a restauracích. Připravujeme první města a regiony, spouštíme na jaře 2027.
               </p>
             </div>
 
             {/* Contact info */}
             <div className="md:col-span-3 space-y-2 text-sm text-slate-200">
-              <div className="font-['Overpass',sans-serif] font-[900] text-white text-sm uppercase tracking-wider mb-2">
+              <div className="font-['Archivo',sans-serif] font-[900] text-white text-sm uppercase tracking-wider mb-2">
                 Kontakt
               </div>
-              <div>E-mail: <a href="mailto:info@odskoc-si.cz" className="hover:text-[#F5B700] transition-colors underline">info@odskoc-si.cz</a></div>
-              <div>Telefon: <a href="tel:+420553000000" className="hover:text-[#F5B700] transition-colors">+420 553 000 000</a></div>
+              <div>E-mail: <a href="mailto:info@odskocsi.cz" className="hover:text-[#F5B700] transition-colors underline">info@odskocsi.cz</a></div>
               <div className="pt-1 text-slate-300">Správce sítě: <strong>Groovy Company s.r.o.</strong></div>
             </div>
 
             {/* Legal and Privacy */}
             <div className="md:col-span-3 space-y-2 text-sm text-slate-200">
-              <div className="font-['Overpass',sans-serif] font-[900] text-white text-sm uppercase tracking-wider mb-2">
+              <div className="font-['Archivo',sans-serif] font-[900] text-white text-sm uppercase tracking-wider mb-2">
                 Informace
               </div>
               <div>
@@ -836,7 +856,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   Ochrana osobních údajů (GDPR)
                 </button>
               </div>
-              <div className="text-[#F5B700] font-['Overpass',sans-serif] font-[800] pt-1">
+              <div className="text-[#F5B700] font-['Archivo',sans-serif] font-[800] pt-1">
                 Zahájení zkušebního provozu: jaro 2027
               </div>
             </div>

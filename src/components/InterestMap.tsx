@@ -255,7 +255,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
 
         const mestoDisplay = mesto.trim() ? ` – ${escapeHtml(mesto.trim())}` : '';
         popupHtml = `
-          <div style="font-family: 'Overpass', sans-serif; font-weight: 800; font-size: 13px; color: #14294B; text-align: left; padding: 2px 4px; white-space: nowrap;">
+          <div style="font-family: 'Archivo', sans-serif; font-weight: 800; font-size: 13px; color: #14294B; text-align: left; padding: 2px 4px; white-space: nowrap;">
             Tip na WC${mestoDisplay}
           </div>
         `;
@@ -272,7 +272,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                 <svg width="28" height="36" viewBox="0 0 28 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M14 0C6.268 0 0 6.268 0 14C0 23.5 12 34.5 14 36C16 34.5 28 23.5 28 14C28 6.268 21.732 0 14 0Z" fill="#14294B"/>
                   <circle cx="14" cy="14" r="10.5" fill="#1E3A67"/>
-                  <text x="14" y="15" fill="#FFFFFF" font-family="'Overpass', system-ui, sans-serif" font-weight="900" font-size="10.5" text-anchor="middle" dominant-baseline="central">WC</text>
+                  <text x="14" y="15" fill="#FFFFFF" font-family="'Archivo', system-ui, sans-serif" font-weight="900" font-size="10.5" text-anchor="middle" dominant-baseline="central">WC</text>
                 </svg>
               </div>
             `,
@@ -321,7 +321,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
         }
 
         popupHtml = `
-          <div style="font-family: 'Overpass', sans-serif; min-width: 160px; max-width: 260px; color: #14294B; text-align: left; padding: 4px;">
+          <div style="font-family: 'Archivo', sans-serif; min-width: 160px; max-width: 260px; color: #14294B; text-align: left; padding: 4px;">
             ${nazev ? `<div style="font-weight: 900; font-size: 15px; margin-bottom: 2px;">${escapeHtml(nazev)}</div>` : ''}
             ${mesto ? `<div style="font-weight: 700; font-size: 13px; color: #1E3A67;">${escapeHtml(mesto)}</div>` : ''}
             ${adresa ? `<div style="font-size: 12px; color: #475569; margin-top: 2px;">${escapeHtml(adresa)}</div>` : ''}
@@ -485,10 +485,10 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
         {/* Header & Counter (Počítadlo zobrazeno jen tehdy, když existují skutečná data) */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="space-y-2">
-            <h2 className="font-['Overpass',sans-serif] font-[900] text-[32px] sm:text-[44px] text-[#14294B] leading-[1.0] tracking-[-0.5px]">
+            <h2 className="font-['Archivo',sans-serif] font-[900] text-[32px] sm:text-[44px] text-[#14294B] leading-[1.0] tracking-[-0.5px]">
               Kde chybí toalety? Označte to v mapě
             </h2>
-            <p className="font-['Atkinson_Hyperlegible_Next','Atkinson_Hyperlegible',sans-serif] text-[18px] text-slate-700 leading-[1.5] max-w-[64ch]">
+            <p className="font-['Archivo',sans-serif] text-[18px] text-slate-700 leading-[1.5] max-w-[64ch]">
               Kavárny a restaurace, kde si odskočíte zdarma a bez ptaní. Síť právě vzniká, pomozte nám vybrat místa.
             </p>
           </div>
@@ -496,13 +496,13 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
           {/* Počítadlo návrhů jen tehdy, když existují skutečná data z formuláře */}
           {hasRealData && (
             <div className="p-4 bg-white border-2 border-[#14294B] rounded-[6px] shrink-0 text-left md:text-right shadow-sm">
-              <div className="font-['Overpass',sans-serif] font-[900] text-[30px] text-[#14294B] leading-none tabular-nums">
+              <div className="font-['Archivo',sans-serif] font-[900] text-[30px] text-[#14294B] leading-none tabular-nums">
                 {places.length}{' '}
                 <span className="text-[20px]">
                   {places.length === 1 ? 'místo' : places.length < 5 ? 'místa' : 'míst'}
                 </span>
               </div>
-              <div className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-xs font-[700] text-slate-600 mt-1">
+              <div className="font-['Archivo',sans-serif] text-xs font-[700] text-slate-600 mt-1">
                 v databázi Odskoč si
               </div>
             </div>
@@ -512,7 +512,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
         {/* Instrukční lišta pro uživatele */}
         <div className="p-3 bg-[#14294B] text-white rounded-[6px] text-sm flex items-center gap-2">
           <span className="w-3.5 h-3.5 rounded-full bg-[#F5B700] shrink-0 border border-[#14294B]" aria-hidden="true" />
-          <span className="font-['Overpass',sans-serif] font-[800]">
+          <span className="font-['Archivo',sans-serif] font-[800]">
             Kliknutím do mapy označíte přesnou polohu, kde vám WC chybí
           </span>
         </div>
@@ -530,11 +530,11 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
 
               {/* Když API vrátí prázdný seznam, ukaž na mapě text: „Zatím tu nic není. Buďte první, kdo navrhne místo.“ */}
               {places.length === 0 && !loadingPlaces && (
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 z-[400] max-w-[90%] bg-white/95 backdrop-blur-xs text-[#14294B] px-5 py-3 rounded-[8px] border-2 border-[#14294B] shadow-lg text-center font-['Overpass',sans-serif] pointer-events-auto">
+                <div className="absolute top-4 left-1/2 -translate-x-1/2 z-[400] max-w-[90%] bg-white/95 backdrop-blur-xs text-[#14294B] px-5 py-3 rounded-[8px] border-2 border-[#14294B] shadow-lg text-center font-['Archivo',sans-serif] pointer-events-auto">
                   <div className="font-[900] text-[15px] sm:text-[17px] text-[#14294B]">
                     Zatím tu nic není. Buďte první, kdo navrhne místo.
                   </div>
-                  <div className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-xs text-slate-600 mt-0.5">
+                  <div className="font-['Archivo',sans-serif] text-xs text-slate-600 mt-0.5">
                     Klikněte do mapy nebo vyplňte formulář vedle.
                   </div>
                 </div>
@@ -542,7 +542,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
             </div>
 
             {/* Legenda markerů */}
-            <div className="p-3 bg-white border-2 border-[#14294B] rounded-[6px] flex flex-wrap items-center justify-between gap-3 text-xs font-['Overpass',sans-serif] font-[800]">
+            <div className="p-3 bg-white border-2 border-[#14294B] rounded-[6px] flex flex-wrap items-center justify-between gap-3 text-xs font-['Archivo',sans-serif] font-[800]">
               <div className="flex items-center gap-2 text-slate-800">
                 <span className="w-3.5 h-3.5 rounded-full bg-[#F5B700] border border-black/30 inline-block shrink-0" />
                 <span>Tip na WC</span>
@@ -568,11 +568,11 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
             <div className="border-b border-slate-200 pb-3">
               <div className="flex items-center gap-2">
                 <MapPin className="text-[#F5B700] shrink-0" size={22} />
-                <h3 className="font-['Overpass',sans-serif] font-[900] text-[22px] sm:text-[24px] text-[#14294B] leading-tight">
+                <h3 className="font-['Archivo',sans-serif] font-[900] text-[22px] sm:text-[24px] text-[#14294B] leading-tight">
                   Navrhnout místo
                 </h3>
               </div>
-              <p className="font-['Atkinson_Hyperlegible_Next',sans-serif] text-xs text-slate-600 mt-1 leading-normal">
+              <p className="font-['Archivo',sans-serif] text-xs text-slate-600 mt-1 leading-normal">
                 Víte o kavárně, restauraci nebo ulici, kde by toaleta bodla? Dejte nám vědět.
               </p>
             </div>
@@ -581,7 +581,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
             {successMessage && (
               <div className="p-4 bg-emerald-50 border-2 border-emerald-500 rounded-[6px] space-y-2 text-center animate-in fade-in duration-200">
                 <CheckCircle2 size={32} className="text-emerald-600 mx-auto" />
-                <div className="font-['Overpass',sans-serif] font-[900] text-[#14294B] text-[18px]">
+                <div className="font-['Archivo',sans-serif] font-[900] text-[#14294B] text-[18px]">
                   {successMessage}
                 </div>
                 <button
@@ -749,7 +749,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full h-12 bg-[#F5B700] hover:bg-[#E0A600] active:bg-[#C99500] text-[#14294B] font-['Overpass',sans-serif] font-[900] text-[16px] rounded-[4px] transition-colors cursor-pointer shadow-sm disabled:opacity-50"
+                    className="w-full h-12 bg-[#F5B700] hover:bg-[#E0A600] active:bg-[#C99500] text-[#14294B] font-['Archivo',sans-serif] font-[900] text-[16px] rounded-[4px] transition-colors cursor-pointer shadow-sm disabled:opacity-50"
                   >
                     {submitting ? 'Odesílám návrh...' : 'Odeslat tip na místo'}
                   </button>
@@ -768,12 +768,12 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
               className="w-full p-4 flex items-center justify-between text-left hover:bg-slate-50 transition-colors cursor-pointer"
             >
               <div className="flex items-center gap-2">
-                <span className="font-['Overpass',sans-serif] font-[900] text-[18px] text-[#14294B]">
+                <span className="font-['Archivo',sans-serif] font-[900] text-[18px] text-[#14294B]">
                   Přehled navržených měst ({cityCounts.length}{' '}
                   {cityCounts.length === 1 ? 'město' : cityCounts.length < 5 ? 'města' : 'měst'})
                 </span>
               </div>
-              <div className="flex items-center gap-1.5 text-xs font-['Overpass',sans-serif] font-[800] text-slate-700">
+              <div className="flex items-center gap-1.5 text-xs font-['Archivo',sans-serif] font-[800] text-slate-700">
                 <span>{citiesListOpen ? 'Sbalit seznam' : 'Rozbalit seznam'}</span>
                 {citiesListOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
               </div>
@@ -788,7 +788,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                       className="p-3 bg-white border border-slate-200 rounded-[4px] flex items-center justify-between"
                     >
                       <span className="font-bold text-sm text-[#14294B] truncate mr-2">{city}</span>
-                      <span className="font-['Overpass',sans-serif] font-[900] text-sm text-[#14294B] tabular-nums bg-slate-100 px-2 py-0.5 rounded-[4px]">
+                      <span className="font-['Archivo',sans-serif] font-[900] text-sm text-[#14294B] tabular-nums bg-slate-100 px-2 py-0.5 rounded-[4px]">
                         {count} {count === 1 ? 'místo' : count < 5 ? 'místa' : 'míst'}
                       </span>
                     </div>

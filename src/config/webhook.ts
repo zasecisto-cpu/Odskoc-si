@@ -84,18 +84,18 @@ export async function submitToGoogleSheet(payload: WebhookPayload): Promise<{ su
   }
 
   // Pokud není nastavena URL webhooku, simulujeme úspěšné uložení v prohlížeči
-  if (!GOOGLE_APPS_SCRIPT_WEBHOOK_URL || GOOGLE_APPS_SCRIPT_WEBHOOK_URL.trim() === '') {
+  if (!API_URL || API_URL.trim() === '') {
     console.info('Webhook URL není nastavena. Data byla uložena lokálně v prohlížeči:', enrichedPayload);
     return { success: true, message: 'Uloženo lokálně (Google Apps Script URL není nakonfigurována).' };
   }
 
   try {
-    // Google Apps Script často provádí redirect (302), proto používáme mode: 'no-cors' nebo standardní POST
-    await fetch(GOOGLE_APPS_SCRIPT_WEBHOOK_URL, {
+    // Google Apps Script POST s mode 'no-cors', Content-Type 'text/plain;charset=utf-8' a JSON body
+    await fetch(API_URL, {
       method: 'POST',
       mode: 'no-cors',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-Type': 'text/plain;charset=utf-8',
       },
       body: JSON.stringify(enrichedPayload),
     });

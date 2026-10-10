@@ -33,7 +33,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onScrollToSection }) => {
 
       {/* Right on Desktop:
           Mapa zájmu, Pro města a regiony, Pro kavárny a restaurace, FAQ */}
-      <nav aria-label="Hlavní navigace" className="hidden md:flex items-center gap-6 font-['Overpass',sans-serif] font-[900] text-xs uppercase tracking-wider text-white">
+      <nav aria-label="Hlavní navigace" className="hidden md:flex items-center gap-6 font-['Archivo',sans-serif] font-[900] text-xs uppercase tracking-wider text-white">
         <button
           type="button"
           onClick={() => handleLinkClick('mapa-zajmu')}
@@ -82,7 +82,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onScrollToSection }) => {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-14 left-0 right-0 bg-[#14294B] border-b-2 border-[#1E3A67] p-5 space-y-3 font-['Overpass',sans-serif] shadow-2xl">
+        <div className="md:hidden absolute top-14 left-0 right-0 bg-[#14294B] border-b-2 border-[#1E3A67] p-5 space-y-3 font-['Archivo',sans-serif] shadow-2xl">
           <nav aria-label="Mobilní navigace" className="flex flex-col space-y-3 text-sm font-[900] uppercase tracking-wider text-left">
             <button
               type="button"

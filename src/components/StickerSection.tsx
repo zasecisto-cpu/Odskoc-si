@@ -20,10 +20,10 @@ export const StickerSection: React.FC = () => {
 
         {/* Right: Heading and description */}
         <div className="md:col-span-7 space-y-3 sm:space-y-4">
-          <h2 className="font-['Overpass',sans-serif] font-[900] text-[28px] sm:text-[38px] text-[#14294B] leading-[1.05] tracking-[-0.5px]">
+          <h2 className="font-['Archivo',sans-serif] font-[900] text-[28px] sm:text-[38px] text-[#14294B] leading-[1.05] tracking-[-0.5px]">
             Až uvidíte tuhle nálepku, můžete dovnitř.
           </h2>
-          <p className="font-['Atkinson_Hyperlegible_Next','Atkinson_Hyperlegible',sans-serif] text-[18px] sm:text-[20px] text-slate-700 leading-[1.5]">
+          <p className="font-['Archivo',sans-serif] text-[18px] sm:text-[20px] text-slate-700 leading-[1.5]">
             Vstup je zdarma, nemusíte si nic kupovat ani se ptát.
           </p>
         </div>

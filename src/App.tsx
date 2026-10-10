@@ -28,7 +28,7 @@ export default function App() {
   }, [scrollToSection]);
 
   return (
-    <div className="w-full min-h-screen bg-white text-[#14294B] font-['Atkinson_Hyperlegible_Next','Atkinson_Hyperlegible',sans-serif] flex flex-col">
+    <div className="w-full min-h-screen bg-white text-[#14294B] font-['Archivo',sans-serif] flex flex-col">
       {/* 1. Header (sticky): logo left, navigation right */}
       <TopBar onScrollToSection={scrollToSection} />
 

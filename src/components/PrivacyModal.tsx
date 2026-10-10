@@ -10,11 +10,11 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs text-left font-['Atkinson_Hyperlegible_Next','Atkinson_Hyperlegible',sans-serif]">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs text-left font-['Archivo',sans-serif]">
       <div className="bg-white text-[#14294B] rounded-[8px] max-w-2xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-150 border-2 border-[#14294B]">
         {/* Header */}
         <div className="h-14 bg-[#14294B] text-white px-5 sm:px-6 flex items-center justify-between shrink-0">
-          <div className="flex items-center gap-2 font-['Overpass',sans-serif] font-[900] text-base">
+          <div className="flex items-center gap-2 font-['Archivo',sans-serif] font-[900] text-base">
             <ShieldCheck size={20} className="text-[#F5B700]" />
             <span>Ochrana osobních údajů</span>
           </div>
@@ -31,7 +31,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
         {/* Content */}
         <div className="p-6 overflow-y-auto space-y-4 text-[16px] text-slate-700 leading-relaxed">
           <div>
-            <h4 className="font-['Overpass',sans-serif] font-[900] text-[#14294B] text-lg mb-1">
+            <h4 className="font-['Archivo',sans-serif] font-[900] text-[#14294B] text-lg mb-1">
               Správce osobních údajů
             </h4>
             <p>
@@ -43,7 +43,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
           </div>
 
           <div>
-            <h4 className="font-['Overpass',sans-serif] font-[900] text-[#14294B] text-lg mb-1">
+            <h4 className="font-['Archivo',sans-serif] font-[900] text-[#14294B] text-lg mb-1">
               Účel zpracování údajů
             </h4>
             <p>
@@ -63,7 +63,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
           </div>
 
           <div>
-            <h4 className="font-['Overpass',sans-serif] font-[900] text-[#14294B] text-lg mb-1">
+            <h4 className="font-['Archivo',sans-serif] font-[900] text-[#14294B] text-lg mb-1">
               Rozsah a doba uchování
             </h4>
             <p>
@@ -72,11 +72,11 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
           </div>
 
           <div>
-            <h4 className="font-['Overpass',sans-serif] font-[900] text-[#14294B] text-lg mb-1">
+            <h4 className="font-['Archivo',sans-serif] font-[900] text-[#14294B] text-lg mb-1">
               Vaše práva
             </h4>
             <p>
-              Máte právo svůj souhlas kdykoliv odvolat, požadovat informaci o zpracovávaných údajích, jejich opravu či výmaz. V případě dotazů nás kontaktujte na e-mailu: <strong>info@odskoc-si.cz</strong>.
+              Máte právo svůj souhlas kdykoliv odvolat, požadovat informaci o zpracovávaných údajích, jejich opravu či výmaz. V případě dotazů nás kontaktujte na e-mailu: <strong>info@odskocsi.cz</strong>.
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
           <button
             type="button"
             onClick={onClose}
-            className="h-10 px-5 bg-[#14294B] hover:bg-[#1E3A67] text-white font-['Overpass',sans-serif] font-[900] text-xs rounded-[4px] transition-colors cursor-pointer"
+            className="h-10 px-5 bg-[#14294B] hover:bg-[#1E3A67] text-white font-['Archivo',sans-serif] font-[900] text-xs rounded-[4px] transition-colors cursor-pointer"
           >
             Rozumím a zavřít
           </button>
