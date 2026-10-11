@@ -101,32 +101,32 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
 
   const faqItems = [
     {
-      q: 'Musím si v podniku něco koupit?',
-      a: 'Ne. Vstup na WC je zdarma a bez nutnosti nákupu pro každého slušného návštěvníka. Obsluha ví, že podnik je zapojený v síti, a nikdo po vás nebude vyžadovat účtenku ani útratu.',
+      q: 'Musím si v\u00A0podniku něco koupit?',
+      a: 'Ne. Vstup na WC je zdarma a\u00A0bez nutnosti nákupu pro každého slušného návštěvníka. Obsluha ví, že podnik je zapojený v\u00A0síti, a\u00A0nikdo po vás nebude vyžadovat účtenku ani útratu.',
     },
     {
       q: 'Je to pro veřejnost skutečně zdarma?',
-      a: 'Ano, pro návštěvníky zcela zdarma. Provoz toalet platí město nebo region a zapojené kavárny a restaurace dostávají každý měsíc pevnou odměnu.',
+      a: 'Ano, pro návštěvníky zcela zdarma. Provoz toalet platí město nebo region a\u00A0zapojené kavárny a\u00A0restaurace dostávají každý měsíc pevnou odměnu.',
     },
     {
-      q: 'Kdy a kde síť Odskoč si odstartuje?',
-      a: 'Síť se právě připravuje. Spouštíme na jaře 2027 v prvních městech v České republice. Konkrétní lokality vybíráme podle počtu návrhů od občanů a otevřenosti místních radnic.',
+      q: 'Kdy a\u00A0kde síť Odskoč si odstartuje?',
+      a: 'Síť se právě připravuje. Spouštíme na jaře\u00A02027 v\u00A0prvních městech v\u00A0České republice. Konkrétní lokality vybíráme podle počtu návrhů od občanů a\u00A0otevřenosti místních radnic.',
     },
     {
       q: 'Může personál podniku někoho na WC nevpustit?',
-      a: 'Ano. Podnik může odmítnout osoby pod vlivem alkoholu či drog a osoby, které se chovají agresivně nebo narušují provoz.',
+      a: 'Ano. Podnik může odmítnout osoby pod vlivem alkoholu či drog a\u00A0osoby, které se chovají agresivně nebo narušují provoz.',
     },
     {
       q: 'Potřebuji do mobilu nějakou aplikaci?',
-      a: 'Ne, žádná aplikace se neinstaluje. Odskoč si funguje jednoduše v internetovém prohlížeči jako interaktivní mapa přístupná na mobilu i počítači.',
+      a: 'Ne, žádná aplikace se neinstaluje. Odskoč si funguje jednoduše v\u00A0internetovém prohlížeči jako interaktivní mapa přístupná na mobilu i\u00A0počítači.',
     },
     {
-      q: 'Jak funguje zkušební provoz pro města a regiony?',
-      a: 'Zkušební provoz nabízíme na jednu celou turistickou sezónu se zavedením sítě zcela zdarma, bez finančního rizika a s možností smlouvu bez sankcí ukončit.',
+      q: 'Jak funguje zkušební provoz pro města a\u00A0regiony?',
+      a: 'Zkušební provoz nabízíme na jednu celou turistickou sezónu se zavedením sítě zcela zdarma, bez finančního rizika a\u00A0s\u00A0možností smlouvu bez sankcí ukončit.',
     },
     {
       q: 'Kdo síť Odskoč si provozuje?',
-      a: 'Správcem a provozovatelem sítě je společnost Groovy Company s.r.o., která zajišťuje smluvní vztahy s městy i podniky, audity kvality, jednotné značení a výplatu odměn.',
+      a: 'Správcem a\u00A0provozovatelem sítě je společnost Groovy Company s.r.o., která zajišťuje smluvní vztahy s\u00A0městy i\u00A0podniky, audity kvality, jednotné značení a\u00A0výplatu odměn.',
     },
   ];
 
@@ -164,7 +164,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
 
               {/* Podnadpis dle zadání */}
               <p className="font-['Archivo',sans-serif] text-[18px] sm:text-[21px] text-white/90 leading-[1.4] max-w-[55ch] font-medium">
-                Kavárny a restaurace, kde si odskočíte zdarma a bez ptaní. Síť právě vzniká, pomozte nám vybrat místa.
+                Kavárny a&nbsp;restaurace, kde si odskočíte zdarma a&nbsp;bez ptaní. Síť právě vzniká, pomozte nám vybrat místa.
               </p>
 
               {/* Jednoduchý žlutý štítek „Spouštíme na jaře 2027“ */}
@@ -180,7 +180,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   }}
                   className="font-['Archivo',sans-serif] font-[900] text-sm sm:text-base uppercase tracking-wider select-none"
                 >
-                  Spouštíme na jaře 2027
+                  Spouštíme na jaře&nbsp;2027
                 </span>
               </div>
             </div>
@@ -206,7 +206,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                     </span>
                   </div>
                   <p className="font-['Archivo',sans-serif] text-[15px] sm:text-[16px] text-slate-200 leading-[1.4]">
-                    Veřejná WC v centru bez stavby a investic. Podniky zajistíme my, vy platíte jednu fakturu.
+                    Veřejná WC v&nbsp;centru bez stavby a&nbsp;investic. Podniky zajistíme my, vy platíte jednu fakturu.
                   </p>
                 </div>
               </button>
@@ -225,7 +225,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                     </span>
                   </div>
                   <p className="font-['Archivo',sans-serif] text-[15px] sm:text-[16px] text-slate-200 leading-[1.4]">
-                    Pusťte lidi na toaletu a dostávejte 2 000 Kč každý měsíc. Nálepku i zápis do map zařídíme my.
+                    Pusťte lidi na toaletu a&nbsp;dostávejte {'2\u00A0000\u00A0Kč'} každý měsíc. Nálepku i&nbsp;zápis do map zařídíme my.
                   </p>
                 </div>
               </button>
@@ -277,17 +277,150 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               Partnerství pro samosprávy
             </div>
             <h2 className="font-['Archivo',sans-serif] font-[900] text-[34px] sm:text-[46px] leading-[1.05] tracking-[-0.5px] text-white">
-              Síť veřejných toalet pro města a regiony. Bez stavby a bez investice.
+              Síť veřejných toalet pro města a&nbsp;regiony. Bez stavby a&nbsp;bez investice.
             </h2>
             <p className="font-['Archivo',sans-serif] text-[18px] sm:text-[19px] text-white/90 leading-[1.5]">
-              Využijte existující zázemí restaurací a kaváren v centru, u náměstí, cyklostezek a turistických cílů. Jedna smlouva, jedna faktura měsíčně, nulová administrativa s jednotlivými provozovnami.
+              Využijte existující zázemí restaurací a&nbsp;kaváren v&nbsp;centru, u&nbsp;náměstí, cyklostezek a&nbsp;turistických cílů. Jedna smlouva, jedna faktura měsíčně, nulová administrativa s&nbsp;jednotlivými provozovnami.
             </p>
+          </div>
+
+          {/* Srovnání nákladů */}
+          <div className="space-y-6">
+            <div>
+              <div className="inline-block bg-[#F5B700] text-[#14294B] text-[11px] font-['Archivo',sans-serif] font-[900] uppercase tracking-wider px-2.5 py-1 rounded-[4px] mb-3">
+                KOLIK STOJÍ VLASTNÍ WC
+              </div>
+              <h3 className="font-['Archivo',sans-serif] font-[900] text-[24px] sm:text-[32px] text-white leading-tight">
+                Jedno veřejné WC stojí víc, než se zdá
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              {/* KARTA 1 – Vlastní veřejné WC */}
+              <div className="bg-[#EEF1F6] text-[#14294B] p-6 sm:p-8 rounded-[8px] space-y-6">
+                <h4 className="font-['Archivo',sans-serif] font-[900] text-[22px] sm:text-[24px] text-[#14294B]">
+                  Vlastní veřejné WC
+                </h4>
+
+                <div className="space-y-4 pb-4 border-b border-[#D8DEE9]">
+                  <div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-['Archivo',sans-serif] font-[900] text-[30px] sm:text-[36px] leading-none text-[#14294B]">
+                        od 1&nbsp;mil.&nbsp;Kč
+                      </span>
+                      <span className="font-['Archivo',sans-serif] font-[700] text-sm text-slate-600 uppercase tracking-wide">
+                        stavba
+                      </span>
+                    </div>
+                    <p className="text-xs text-slate-600 mt-1">
+                      projekt, povolení, přípojky vody a&nbsp;kanalizace, bezbariérovost
+                    </p>
+                  </div>
+
+                  <div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-['Archivo',sans-serif] font-[900] text-[30px] sm:text-[36px] leading-none text-[#14294B]">
+                        ≈ 1&nbsp;mil.&nbsp;Kč ročně
+                      </span>
+                      <span className="font-['Archivo',sans-serif] font-[700] text-sm text-slate-600 uppercase tracking-wide">
+                        provoz
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <ul className="space-y-2.5 text-sm text-slate-800">
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#B4232A] font-[900] leading-tight select-none">✕</span>
+                    <span>obsluha a&nbsp;úklid několikrát denně</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#B4232A] font-[900] leading-tight select-none">✕</span>
+                    <span>voda, energie, spotřební materiál</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#B4232A] font-[900] leading-tight select-none">✕</span>
+                    <span>drobné opravy a&nbsp;údržba</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#B4232A] font-[900] leading-tight select-none">✕</span>
+                    <span>pojištění</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#B4232A] font-[900] leading-tight select-none">✕</span>
+                    <span>vandalismus a&nbsp;graffiti</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#B4232A] font-[900] leading-tight select-none">✕</span>
+                    <span>jedno místo ve městě, večer a&nbsp;o&nbsp;víkendu často zavřeno</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* KARTA 2 – Síť Odskoč si */}
+              <div className="bg-[#1E3560] border-2 border-[#F5B700] text-white p-6 sm:p-8 rounded-[8px] space-y-6">
+                <h4 className="font-['Archivo',sans-serif] font-[900] text-[22px] sm:text-[24px] text-[#F5B700]">
+                  Síť Odskoč si
+                </h4>
+
+                <div className="space-y-4 pb-4 border-b border-[#2B4B85]">
+                  <div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-['Archivo',sans-serif] font-[900] text-[30px] sm:text-[36px] leading-none text-white">
+                        0&nbsp;Kč
+                      </span>
+                      <span className="font-['Archivo',sans-serif] font-[700] text-sm text-slate-300 uppercase tracking-wide">
+                        stavba ani investice
+                      </span>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div className="flex items-baseline gap-2">
+                      <span className="font-['Archivo',sans-serif] font-[900] text-[30px] sm:text-[36px] leading-none text-white">
+                        zlomek ceny
+                      </span>
+                      <span className="font-['Archivo',sans-serif] font-[700] text-sm text-slate-300 uppercase tracking-wide">
+                        provoz celé sítě
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                <ul className="space-y-2.5 text-sm text-slate-100">
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#F5B700] font-[900] leading-tight select-none">✓</span>
+                    <span>toalety v&nbsp;kavárnách a&nbsp;restauracích, které už existují</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#F5B700] font-[900] leading-tight select-none">✓</span>
+                    <span>úklid, opravy i&nbsp;vybavení zajišťuje podnik</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#F5B700] font-[900] leading-tight select-none">✓</span>
+                    <span>víc míst po celém centru a&nbsp;u&nbsp;turistických cílů</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#F5B700] font-[900] leading-tight select-none">✓</span>
+                    <span>otevřeno, kdy je otevřený podnik – i&nbsp;večer</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#F5B700] font-[900] leading-tight select-none">✓</span>
+                    <span>drobné škody hradíme z&nbsp;rezervy sítě</span>
+                  </li>
+                  <li className="flex items-start gap-2.5">
+                    <span className="text-[#F5B700] font-[900] leading-tight select-none">✓</span>
+                    <span>jedna faktura měsíčně, platí se jen za fungující místa</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* Čtyři kroky realizace */}
           <div>
             <div className="text-xs font-['Archivo',sans-serif] font-[900] text-[#F5B700] uppercase tracking-wider mb-4">
-              Jak funguje realizace ve 4 krocích:
+              Jak funguje realizace ve 4&nbsp;krocích:
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               <div className="p-5 bg-[#1E3560] border border-[#2B4B85] rounded-[8px] space-y-2">
@@ -295,10 +428,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   01
                 </div>
                 <div className="font-['Archivo',sans-serif] font-[900] text-[18px] text-white leading-snug">
-                  Vybereme a podepíšeme podniky
+                  Vybereme a&nbsp;podepíšeme podniky
                 </div>
                 <p className="text-[14px] text-slate-200 leading-relaxed">
-                  Zmapujeme klíčové zóny ve vašem městě či regionu, oslovíme kvalitní kavárny a uzavřeme s nimi jednotné smlouvy.
+                  Zmapujeme klíčové zóny ve vašem městě či regionu, oslovíme kvalitní kavárny a&nbsp;uzavřeme s&nbsp;nimi jednotné smlouvy.
                 </p>
               </div>
 
@@ -307,10 +440,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   02
                 </div>
                 <div className="font-['Archivo',sans-serif] font-[900] text-[18px] text-white leading-snug">
-                  Označíme a zapíšeme do map
+                  Označíme a&nbsp;zapíšeme do map
                 </div>
                 <p className="text-[14px] text-slate-200 leading-relaxed">
-                  Každé místo označíme žlutou nálepkou a zaneseme do všech hlavních map: Google Mapy, Mapy.cz i OpenStreetMap.
+                  Každé místo označíme žlutou nálepkou a&nbsp;zaneseme do všech hlavních map: Google Mapy, Mapy.cz i&nbsp;OpenStreetMap.
                 </p>
               </div>
 
@@ -322,7 +455,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   Hlídáme kvalitu
                 </div>
                 <p className="text-[14px] text-slate-200 leading-relaxed">
-                  QR hodnocení od návštěvníků a místní kontrolor, který každé místo anonymně navštíví jednou měsíčně.
+                  QR hodnocení od návštěvníků a&nbsp;místní kontrolor, který každé místo anonymně navštíví jednou měsíčně.
                 </p>
               </div>
 
@@ -331,10 +464,10 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   04
                 </div>
                 <div className="font-['Archivo',sans-serif] font-[900] text-[18px] text-white leading-snug">
-                  Vyplácíme podniky a reportujeme
+                  Vyplácíme podniky a&nbsp;reportujeme
                 </div>
                 <p className="text-[14px] text-slate-200 leading-relaxed">
-                  Zajišťujeme pravidelnou výplatu odměn podnikům. Město od nás dostává jednu fakturu měsíčně a čtvrtletní report.
+                  Zajišťujeme pravidelnou výplatu odměn podnikům. Město od nás dostává jednu fakturu měsíčně a&nbsp;čtvrtletní report.
                 </p>
               </div>
             </div>
@@ -346,13 +479,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
             <div className="p-6 sm:p-7 bg-[#1A3158] border-2 border-[#F5B700] rounded-[8px] space-y-3">
               <div className="flex items-center gap-2 font-['Archivo',sans-serif] font-[900] text-[#F5B700] text-[20px]">
                 <Compass size={22} className="text-[#F5B700]" />
-                <span>Pro mikroregiony a turistické oblasti</span>
+                <span>Pro mikroregiony a&nbsp;turistické oblasti</span>
               </div>
               <p className="text-[16px] text-white/95 leading-[1.5]">
-                „Turista nekončí na hranici obce. Jednou smlouvou pokryjeme celý region – náměstí, zámky, cyklostezky i vinařské trasy. Varianta jen na turistickou sezónu (duben–říjen).“
+                „Turista nekončí na hranici obce. Jednou smlouvou pokryjeme celý region – náměstí, zámky, cyklostezky i&nbsp;vinařské trasy. Varianta jen na turistickou sezónu (duben–říjen).“
               </p>
               <div className="text-xs text-slate-300 pt-1">
-                Ideální pro sdružení obcí, MAS, destinační agentury a turistické svazky.
+                Ideální pro sdružení obcí, MAS, destinační agentury a&nbsp;turistické svazky.
               </div>
             </div>
 
@@ -365,8 +498,8 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               <ul className="text-[15px] text-slate-200 space-y-2 list-disc list-inside">
                 <li><strong>Pevný konec po sezóně</strong> – žádné automatické prodlužování ani dlouhodobé závazky.</li>
                 <li><strong>Zavedení sítě zdarma</strong> – ve zkušebním provozu neplatíte žádné implementační poplatky.</li>
-                <li><strong>Platba zpětně a jen za ověřená místa</strong> – platíte pouze za provozovny s garantovanou kvalitou.</li>
-                <li><strong>Smlouva zaniká bez sankcí</strong>, když se v lokalitě nesejde smluvený počet podniků.</li>
+                <li><strong>Platba zpětně a&nbsp;jen za ověřená místa</strong> – platíte pouze za provozovny s&nbsp;garantovanou kvalitou.</li>
+                <li><strong>Smlouva zaniká bez sankcí</strong>, když se v&nbsp;lokalitě nesejde smluvený počet podniků.</li>
               </ul>
             </div>
           </div>
@@ -378,7 +511,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                 Nezávazná poptávka pro město, obec či region
               </h3>
               <p className="font-['Archivo',sans-serif] text-[16px] text-slate-700 mt-1 font-medium">
-                Cenovou nabídku pošleme do 2 pracovních dnů. Připravíme pro vás konkrétní analýzu potenciálu toalet ve vaší lokalitě.
+                Cenovou nabídku pošleme do {'2\u00A0pracovních dnů'}. Připravíme pro vás konkrétní analýzu potenciálu toalet ve vaší lokalitě.
               </p>
             </div>
 
@@ -389,7 +522,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   <span>Děkujeme! Poptávka byla úspěšně odeslána.</span>
                 </div>
                 <p className="text-sm text-slate-700">
-                  Pro zástupce města či regionu <strong>{cityMunicipality}</strong> připravujeme cenovou nabídku a ozveme se na e-mail {cityEmail} nejpozději do 2 pracovních dnů.
+                  Pro zástupce města či regionu <strong>{cityMunicipality}</strong> připravujeme cenovou nabídku a&nbsp;ozveme se na e-mail {cityEmail} nejpozději do {'2\u00A0pracovních dnů'}.
                 </p>
               </div>
             ) : (
@@ -412,7 +545,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
 
                   <div>
                     <label htmlFor="city-person" className="block text-xs font-bold text-slate-800 uppercase mb-1">
-                      Jméno a příjmení *
+                      Jméno a&nbsp;příjmení *
                     </label>
                     <input
                       id="city-person"
@@ -484,7 +617,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                       className="mt-0.5 accent-[#14294B]"
                     />
                     <span className="text-slate-800 leading-snug">
-                      Souhlasím se zpracováním osobních údajů společností <strong>Groovy Company s.r.o.</strong> za účelem zaslání cenové nabídky a navázání spolupráce se samosprávou.{' '}
+                      Souhlasím se zpracováním osobních údajů společností <strong>Groovy Company s.r.o.</strong> za účelem zaslání cenové nabídky a&nbsp;navázání spolupráce se samosprávou.{' '}
                       <button
                         type="button"
                         onClick={() => setPrivacyOpen(true)}
@@ -529,13 +662,13 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
             {/* Velké číslo a tarif Komfort */}
             <div className="space-y-2">
               <div className="font-['Archivo',sans-serif] font-[900] text-[42px] sm:text-[56px] text-[#14294B] leading-none tracking-tight">
-                2 000 Kč <span className="text-[24px] sm:text-[28px] font-bold text-slate-700">měsíčně</span>
+                {'2\u00A0000\u00A0Kč'}{' '}<span className="text-[24px] sm:text-[28px] font-bold text-slate-700">měsíčně</span>
               </div>
               <div className="inline-block bg-[#F5B700]/30 border border-[#F5B700] text-[#14294B] px-3 py-1.5 rounded-[6px] text-sm font-semibold">
-                Komfort s bezbariérovým WC nebo přebalovacím pultem: <strong>2 600 Kč měsíčně</strong>
+                Komfort s&nbsp;bezbariérovým WC nebo přebalovacím pultem: <strong>{'2\u00A0600\u00A0Kč'} měsíčně</strong>
               </div>
               <p className="font-['Archivo',sans-serif] text-[17px] text-slate-800 leading-[1.5] pt-1">
-                Za to, že pustíte na toaletu i lidi bez nákupu. Vyplácíme jako nájem, každý měsíc.
+                Za to, že pustíte na toaletu i&nbsp;lidi bez nákupu. Vyplácíme jako nájem, každý měsíc.
               </p>
             </div>
 
@@ -543,11 +676,11 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
             <ul className="space-y-2.5 text-[16px] text-slate-800 list-none p-0 font-medium">
               <li className="flex items-start gap-2.5">
                 <span className="text-[#F5B700] text-lg font-black leading-none mt-0.5">•</span>
-                <span>Peníze chodí každý měsíc do 20. dne, jako nájem.</span>
+                <span>Peníze chodí každý měsíc do 20.&nbsp;dne, jako nájem.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-[#F5B700] text-lg font-black leading-none mt-0.5">•</span>
-                <span>Nálepku, směrovku a zápis do map zařídíme my.</span>
+                <span>Nálepku, směrovku a&nbsp;zápis do map zařídíme my.</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <span className="text-[#F5B700] text-lg font-black leading-none mt-0.5">•</span>
@@ -580,7 +713,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                 Vaše pravidla platí
               </div>
               <p className="text-[15px] text-slate-100 leading-relaxed font-normal">
-                Podnik může odmítnout osoby pod vlivem alkoholu či drog a osoby, které narušují provoz. Klíč od WC můžete mít na baru a půjčovat ho na požádání.
+                Podnik může odmítnout osoby pod vlivem alkoholu či drog a&nbsp;osoby, které narušují provoz. Klíč od WC můžete mít na baru a&nbsp;půjčovat ho na požádání.
               </p>
             </div>
           </div>
@@ -592,7 +725,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                 Nezávazná předregistrace podniku
               </h3>
               <p className="text-xs text-slate-600 mt-1">
-                Zajistěte si místo v síti před spuštěním na jaře 2027. Ozveme se vám s podrobnostmi a návrhem smlouvy.
+                Zajistěte si místo v&nbsp;síti před spuštěním na jaře&nbsp;2027. Ozveme se vám s&nbsp;podrobnostmi a&nbsp;návrhem smlouvy.
               </p>
             </div>
 
@@ -603,7 +736,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                   <span>Děkujeme! Váš podnik byl zaevidován.</span>
                 </div>
                 <p className="text-sm text-slate-700">
-                  Podnik <strong>{businessName}</strong> v obci <strong>{businessCity}</strong> evidujeme v předregistraci. Spojíme se s vámi před zahájením provozu.
+                  Podnik <strong>{businessName}</strong> v&nbsp;obci <strong>{businessCity}</strong> evidujeme v&nbsp;předregistraci. Spojíme se s&nbsp;vámi před zahájením provozu.
                 </p>
               </div>
             ) : (
@@ -619,7 +752,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                       type="text"
                       value={businessName}
                       onChange={(e) => setBusinessName(e.target.value)}
-                      placeholder="např. Kavárna U Věže"
+                      placeholder="např. Kavárna U&#160;Věže"
                       className="w-full h-10 px-3 text-sm bg-white border border-slate-300 rounded-[4px] focus:border-[#14294B] focus:outline-none"
                     />
                   </div>
@@ -650,7 +783,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                     type="text"
                     value={businessAddress}
                     onChange={(e) => setBusinessAddress(e.target.value)}
-                    placeholder="Ulice a orientační číslo"
+                    placeholder="Ulice a&#160;orientační číslo"
                     className="w-full h-10 px-3 text-sm bg-white border border-slate-300 rounded-[4px] focus:border-[#14294B] focus:outline-none"
                   />
                 </div>
@@ -665,7 +798,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                     type="text"
                     value={businessContactPerson}
                     onChange={(e) => setBusinessContactPerson(e.target.value)}
-                    placeholder="Jméno a příjmení"
+                    placeholder="Jméno a&#160;příjmení"
                     className="w-full h-10 px-3 text-sm bg-white border border-slate-300 rounded-[4px] focus:border-[#14294B] focus:outline-none"
                   />
                 </div>
@@ -737,7 +870,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                       className="mt-0.5 accent-[#14294B]"
                     />
                     <span className="text-slate-800 leading-snug">
-                      Souhlasím se zpracováním osobních údajů společností <strong>Groovy Company s.r.o.</strong> za účelem navázání spolupráce a informování o spuštění sítě.{' '}
+                      Souhlasím se zpracováním osobních údajů společností <strong>Groovy Company s.r.o.</strong> za účelem navázání spolupráce a&nbsp;informování o&nbsp;spuštění sítě.{' '}
                       <button
                         type="button"
                         onClick={() => setPrivacyOpen(true)}
@@ -777,7 +910,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
               Časté dotazy (FAQ)
             </h2>
             <p className="font-['Archivo',sans-serif] text-[18px] text-slate-700">
-              Vše, co potřebujete vědět o přípravě sítě toalet a spuštění na jaře 2027.
+              Vše, co potřebujete vědět o&nbsp;přípravě sítě toalet a&nbsp;spuštění na jaře&nbsp;2027.
             </p>
           </div>
 
@@ -829,7 +962,7 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
             <div className="md:col-span-6 space-y-4">
               <Logo variant="dark" height={40} />
               <p className="font-['Archivo',sans-serif] text-[16px] text-slate-200 max-w-sm leading-[1.5]">
-                WC zdarma. Bez nákupu v kavárnách a restauracích. Připravujeme první města a regiony, spouštíme na jaře 2027.
+                WC zdarma. Bez nákupu v&nbsp;kavárnách a&nbsp;restauracích. Připravujeme první města a&nbsp;regiony, spouštíme na jaře&nbsp;2027.
               </p>
             </div>
 
@@ -857,14 +990,14 @@ export const LandingPage: React.FC<LandingPageProps> = ({ onScrollToSection }) =
                 </button>
               </div>
               <div className="text-[#F5B700] font-['Archivo',sans-serif] font-[800] pt-1">
-                Zahájení zkušebního provozu: jaro 2027
+                Zahájení zkušebního provozu: jaro&nbsp;2027
               </div>
             </div>
           </div>
 
           <div className="pt-6 border-t border-[#1E3A67] flex flex-col sm:flex-row items-center justify-between text-xs text-slate-300 gap-2">
             <div>
-              © 2026 <strong>Odskoč si</strong> · Všechna práva vyhrazena.
+              ©&nbsp;2026 <strong>Odskoč si</strong> · Všechna práva vyhrazena.
             </div>
             <div>
               Projekt provozuje <strong>Groovy Company s.r.o.</strong>

@@ -35,7 +35,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
               Správce osobních údajů
             </h4>
             <p>
-              Správcem osobních údajů zpracovávaných v rámci projektu „Odskoč si“ je společnost:
+              Správcem osobních údajů zpracovávaných v&nbsp;rámci projektu „Odskoč si“ je společnost:
             </p>
             <div className="p-3 bg-slate-50 border border-slate-200 rounded-[4px] mt-2 font-bold text-[#14294B]">
               Groovy Company s.r.o.
@@ -47,27 +47,27 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
               Účel zpracování údajů
             </h4>
             <p>
-              Vaše osobní údaje (zejména e-mail, telefon, jméno, název podniku nebo města) shromažďujeme a zpracováváme výhradně za těmito účely:
+              Vaše osobní údaje (zejména e-mail, telefon, jméno, název podniku nebo města) shromažďujeme a&nbsp;zpracováváme výhradně za těmito účely:
             </p>
             <ul className="list-disc list-inside space-y-1 pl-2 mt-2">
               <li>
-                <strong>Informování o spuštění sítě:</strong> Zaslání jednorázového či občasného oznámení, jakmile síť „Odskoč si“ zahájí provoz ve vašem městě nebo lokalitě, kterou jste označili na mapě zájmu.
+                <strong>Informování o&nbsp;spuštění sítě:</strong> Zaslání jednorázového či občasného oznámení, jakmile síť „Odskoč si“ zahájí provoz ve vašem městě nebo lokalitě, kterou jste označili na mapě zájmu.
               </li>
               <li>
-                <strong>Navázání spolupráce:</strong> Komunikace s provozovateli kaváren a restaurací k předregistraci a dojednání podmínek zapojení do sítě.
+                <strong>Navázání spolupráce:</strong> Komunikace s&nbsp;provozovateli kaváren a&nbsp;restaurací k&nbsp;předregistraci a&nbsp;dojednání podmínek zapojení do sítě.
               </li>
               <li>
-                <strong>Příprava zkušebního provozu s městy:</strong> Komunikace se zástupci obcí a městských částí k představení systému a přípravě vzorové smlouvy pro samosprávu.
+                <strong>Příprava zkušebního provozu s&nbsp;městy:</strong> Komunikace se zástupci obcí a&nbsp;městských částí k&nbsp;představení systému a&nbsp;přípravě vzorové smlouvy pro samosprávu.
               </li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-['Archivo',sans-serif] font-[900] text-[#14294B] text-lg mb-1">
-              Rozsah a doba uchování
+              Rozsah a&nbsp;doba uchování
             </h4>
             <p>
-              Údaje zpracováváme na základě vašeho dobrovolného souhlasu uděleného odesláním formuláře či hlasu. Údaje neposkytujeme žádným neoprávněným třetím stranám a uchováváme je po dobu přípravy a zkušebního provozu sítě (nejdéle do odvolání vašeho souhlasu).
+              Údaje zpracováváme na základě vašeho dobrovolného souhlasu uděleného odesláním formuláře či hlasu. Údaje neposkytujeme žádným neoprávněným třetím stranám a&nbsp;uchováváme je po dobu přípravy a&nbsp;zkušebního provozu sítě (nejdéle do odvolání vašeho souhlasu).
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
               Vaše práva
             </h4>
             <p>
-              Máte právo svůj souhlas kdykoliv odvolat, požadovat informaci o zpracovávaných údajích, jejich opravu či výmaz. V případě dotazů nás kontaktujte na e-mailu: <strong>info@odskocsi.cz</strong>.
+              Máte právo svůj souhlas kdykoliv odvolat, požadovat informaci o&nbsp;zpracovávaných údajích, jejich opravu či výmaz. V&nbsp;případě dotazů nás kontaktujte na e-mailu: <strong>info@odskocsi.cz</strong>.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export const PrivacyModal: React.FC<PrivacyModalProps> = ({ isOpen, onClose }) =
             onClick={onClose}
             className="h-10 px-5 bg-[#14294B] hover:bg-[#1E3A67] text-white font-['Archivo',sans-serif] font-[900] text-xs rounded-[4px] transition-colors cursor-pointer"
           >
-            Rozumím a zavřít
+            Rozumím a&nbsp;zavřít
           </button>
         </div>
       </div>

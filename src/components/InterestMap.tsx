@@ -456,7 +456,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
       fetchPlaces();
     } catch (err) {
       console.error('Chyba při odesílání tipu:', err);
-      setErrorMessage('Omlouváme se, došlo k chybě při odesílání. Zkuste to prosím znovu.');
+      setErrorMessage('Omlouváme se, došlo k\u00A0chybě při odesílání. Zkuste to prosím znovu.');
     } finally {
       setSubmitting(false);
     }
@@ -486,10 +486,10 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <div className="space-y-2">
             <h2 className="font-['Archivo',sans-serif] font-[900] text-[32px] sm:text-[44px] text-[#14294B] leading-[1.0] tracking-[-0.5px]">
-              Kde chybí toalety? Označte to v mapě
+              Kde chybí toalety? Označte to v&nbsp;mapě
             </h2>
             <p className="font-['Archivo',sans-serif] text-[18px] text-slate-700 leading-[1.5] max-w-[64ch]">
-              Kavárny a restaurace, kde si odskočíte zdarma a bez ptaní. Síť právě vzniká, pomozte nám vybrat místa.
+              Kavárny a&nbsp;restaurace, kde si odskočíte zdarma a&nbsp;bez ptaní. Síť právě vzniká, pomozte nám vybrat místa.
             </p>
           </div>
 
@@ -503,7 +503,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                 </span>
               </div>
               <div className="font-['Archivo',sans-serif] text-xs font-[700] text-slate-600 mt-1">
-                v databázi Odskoč si
+                v&nbsp;databázi Odskoč si
               </div>
             </div>
           )}
@@ -525,7 +525,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
               <div
                 ref={mapContainerRef}
                 className="w-full h-full"
-                aria-label="Mapa toalet a zájmu v České republice"
+                aria-label="Mapa toalet a&nbsp;zájmu v&nbsp;České republice"
               />
 
               {/* Když API vrátí prázdný seznam, ukaž na mapě text: „Zatím tu nic není. Buďte první, kdo navrhne místo.“ */}
@@ -573,7 +573,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                 </h3>
               </div>
               <p className="font-['Archivo',sans-serif] text-xs text-slate-600 mt-1 leading-normal">
-                Víte o kavárně, restauraci nebo ulici, kde by toaleta bodla? Dejte nám vědět.
+                Víte o&nbsp;kavárně, restauraci nebo ulici, kde by toaleta bodla? Dejte nám vědět.
               </p>
             </div>
 
@@ -645,7 +645,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                     type="text"
                     value={formNazev}
                     onChange={(e) => setFormNazev(e.target.value)}
-                    placeholder="např. Kavárna U Kostela, Bistro Roh..."
+                    placeholder="např. Kavárna U&#160;Kostela, Bistro Roh..."
                     className="w-full h-10 px-3 text-sm bg-white border border-slate-300 rounded-[4px] focus:border-[#14294B] focus:ring-1 focus:ring-[#14294B] focus:outline-none"
                   />
                 </div>
@@ -661,7 +661,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                     type="text"
                     value={formAdresa}
                     onChange={(e) => setFormAdresa(e.target.value)}
-                    placeholder="např. Náměstí Svobody 12, u vlakového nádraží..."
+                    placeholder="např. Náměstí Svobody 12, u&#160;vlakového nádraží..."
                     className="w-full h-10 px-3 text-sm bg-white border border-slate-300 rounded-[4px] focus:border-[#14294B] focus:ring-1 focus:ring-[#14294B] focus:outline-none"
                   />
                 </div>
@@ -678,7 +678,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                         type="button"
                         onClick={handleClearMapSelection}
                         className="text-slate-500 hover:text-red-600 flex items-center gap-0.5 font-bold cursor-pointer"
-                        title="Zrušit označení z mapy"
+                        title="Zrušit označení z&#160;mapy"
                       >
                         <X size={14} />
                         <span>Zrušit</span>
@@ -686,7 +686,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                     </div>
                   ) : (
                     <div className="text-slate-600 leading-tight">
-                      💡 <strong>Tip:</strong> Kliknutím kamkoliv do mapy vyberete přesné souřadnice. Bez kliknutí souřadnice dohledáme z adresy automaticky.
+                      💡 <strong>Tip:</strong> Kliknutím kamkoliv do mapy vyberete přesné souřadnice. Bez kliknutí souřadnice dohledáme z&nbsp;adresy automaticky.
                     </div>
                   )}
                 </div>
@@ -701,7 +701,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                     type="text"
                     value={formPoznamka}
                     onChange={(e) => setFormPoznamka(e.target.value)}
-                    placeholder="např. v okolí není žádné veřejné WC, rušná cyklostezka..."
+                    placeholder="např. v&#160;okolí není žádné veřejné WC, rušná cyklostezka..."
                     className="w-full h-10 px-3 text-sm bg-white border border-slate-300 rounded-[4px] focus:border-[#14294B] focus:ring-1 focus:ring-[#14294B] focus:outline-none"
                   />
                 </div>
@@ -732,7 +732,7 @@ export const InterestMap: React.FC<InterestMapProps> = ({ onOpenPrivacyModal }) 
                       className="mt-0.5 accent-[#14294B]"
                     />
                     <span className="text-slate-800 leading-snug">
-                      Souhlasím se zpracováním údajů za účelem zanesení a prověření tipu na WC.{' '}
+                      Souhlasím se zpracováním údajů za účelem zanesení a&nbsp;prověření tipu na WC.{' '}
                       <button
                         type="button"
                         onClick={onOpenPrivacyModal}

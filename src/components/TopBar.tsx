@@ -48,7 +48,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onScrollToSection }) => {
           onClick={() => handleLinkClick('pro-mesta')}
           className="hover:text-[#F5B700] transition-colors cursor-pointer focus:outline-none focus-visible:underline"
         >
-          Pro města a regiony
+          Pro města a&nbsp;regiony
         </button>
 
         <button
@@ -56,7 +56,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onScrollToSection }) => {
           onClick={() => handleLinkClick('pro-podniky')}
           className="hover:text-[#F5B700] transition-colors cursor-pointer focus:outline-none focus-visible:underline"
         >
-          Pro kavárny a restaurace
+          Pro kavárny a&nbsp;restaurace
         </button>
 
         <button
@@ -98,7 +98,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onScrollToSection }) => {
               onClick={() => handleLinkClick('pro-mesta')}
               className="text-left text-white hover:text-[#F5B700] py-1 cursor-pointer"
             >
-              Pro města a regiony
+              Pro města a&nbsp;regiony
             </button>
 
             <button
@@ -106,7 +106,7 @@ export const TopBar: React.FC<TopBarProps> = ({ onScrollToSection }) => {
               onClick={() => handleLinkClick('pro-podniky')}
               className="text-left text-white hover:text-[#F5B700] py-1 cursor-pointer"
             >
-              Pro kavárny a restaurace
+              Pro kavárny a&nbsp;restaurace
             </button>
 
             <button
